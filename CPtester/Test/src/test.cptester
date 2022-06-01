@@ -9,4 +9,5 @@ Scenario "TestingOperations"
 	THEN result(1000)
 	AND NotLaterThan(2000) Query isAtSingle(1,45,2)
 	AND NotLaterThan(3000) Query isAtSingle(1,60,2)
-}    
+	AND NotLaterThan(2000) Query isAtSingle(1,1,1)
+}

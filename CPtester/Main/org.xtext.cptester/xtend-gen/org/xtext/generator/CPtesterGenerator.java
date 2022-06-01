@@ -50,11 +50,12 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     int counterLength = 0;
     _builder.newLineIfNotEmpty();
-    int solutionLength = 0;
+    int maxTime = 0;
     _builder.newLineIfNotEmpty();
     int errorLenght = 0;
     _builder.newLineIfNotEmpty();
-    _builder.newLine();
+    String condName = "";
+    _builder.newLineIfNotEmpty();
     _builder.append("Class: Machine");
     _builder.newLine();
     _builder.append("\t");
@@ -602,35 +603,41 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.append("Transition: (");
     String _name_18 = scenario.getWhen().eClass().getName();
     _builder.append(_name_18, "\t\t");
-    _builder.append("->Error)");
+    _builder.append("->Error)\t\t\t\t\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t");
-    _builder.append("Guard: ");
     {
       EList<And> _and = scenario.getAnd();
       for(final And and : _and) {
         {
           EList<Conditions> _conditions = and.getConditions();
           for(final Conditions cond : _conditions) {
-            String _xblockexpression_4 = null;
             {
-              errorLenght++;
-              _xblockexpression_4 = "";
-            }
-            _builder.append(_xblockexpression_4, "\t\t\t\t");
-            {
-              int _length_1 = ((Object[])Conversions.unwrapArray(scenario.getAnd(), Object.class)).length;
-              boolean _equals_7 = (errorLenght == _length_1);
-              if (_equals_7) {
-                String _name_19 = cond.getName();
-                _builder.append(_name_19, "\t\t\t\t");
-                _builder.append("(oRunTime, ");
+              EList<Time> _time_11 = cond.getTime();
+              for(final Time tm_2 : _time_11) {
+                Time value_29 = ((Time) tm_2);
+                _builder.append("\t\t");
+                _builder.newLineIfNotEmpty();
                 {
-                  EList<Time> _time_11 = cond.getTime();
-                  for(final Time tm_2 : _time_11) {
-                    Time value_29 = ((Time) tm_2);
-                    int _time_12 = value_29.getTime();
-                    _builder.append(_time_12, "\t\t\t\t");
+                  int _time_12 = value_29.getTime();
+                  boolean _greaterThan = (_time_12 > maxTime);
+                  if (_greaterThan) {
+                    _builder.append("\t\t\t\t");
+                    String _xblockexpression_4 = null;
+                    {
+                      maxTime = value_29.getTime();
+                      _xblockexpression_4 = "";
+                    }
+                    _builder.append(_xblockexpression_4, "\t\t\t\t");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t\t\t\t");
+                    String _xblockexpression_5 = null;
+                    {
+                      condName = cond.getName();
+                      _xblockexpression_5 = "";
+                    }
+                    _builder.append(_xblockexpression_5, "\t\t\t\t");
+                    _builder.newLineIfNotEmpty();
                   }
                 }
               }
@@ -639,14 +646,18 @@ public class CPtesterGenerator extends AbstractGenerator {
         }
       }
     }
+    _builder.append("\t\t\t\t");
+    _builder.append("Guard: ");
+    _builder.append(condName, "\t\t\t\t");
+    _builder.append("(oRuntime, ");
+    _builder.append(maxTime, "\t\t\t\t");
     _builder.append(")");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t\t");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_20 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_20, "\t\t");
+    String _name_19 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_19, "\t\t");
     _builder.append("->Final)\t\t");
     _builder.newLineIfNotEmpty();
     {
@@ -656,133 +667,119 @@ public class CPtesterGenerator extends AbstractGenerator {
           EList<Solution> _solution = and_1.getSolution();
           for(final Solution sol : _solution) {
             _builder.append("\t\t\t\t");
-            String _xblockexpression_5 = null;
             {
-              solutionLength++;
-              _xblockexpression_5 = "";
-            }
-            _builder.append(_xblockexpression_5, "\t\t\t\t");
-            _builder.newLineIfNotEmpty();
-            {
-              int _length_2 = ((Object[])Conversions.unwrapArray(scenario.getAnd(), Object.class)).length;
-              boolean _equals_8 = (solutionLength == _length_2);
-              if (_equals_8) {
+              boolean _equals_7 = sol.eClass().getName().equals("isAtSingle");
+              if (_equals_7) {
+                isAtSingle ias_1 = ((isAtSingle) sol);
+                _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
+                _builder.append("Guard: Arm.BaseServo.ServosOperations.");
+                String _name_20 = sol.eClass().getName();
+                _builder.append(_name_20, "\t\t\t\t");
+                _builder.append("(");
                 {
-                  boolean _equals_9 = sol.eClass().getName().equals("isAtSingle");
-                  if (_equals_9) {
-                    isAtSingle ias_1 = ((isAtSingle) sol);
-                    _builder.newLineIfNotEmpty();
-                    _builder.append("\t\t\t\t");
-                    _builder.append("Guard: Arm.BaseServo.ServosOperations.");
-                    String _name_21 = sol.eClass().getName();
-                    _builder.append(_name_21, "\t\t\t\t");
-                    _builder.append("(");
-                    {
-                      EList<Servo> _servo_6 = ias_1.getServo();
-                      for(final Servo ser_3 : _servo_6) {
-                        Servo value_30 = ((Servo) ser_3);
-                        int _servo_7 = value_30.getServo();
-                        _builder.append(_servo_7, "\t\t\t\t");
-                      }
-                    }
-                    _builder.append(", ");
-                    {
-                      EList<Angle> _angle_24 = ias_1.getAngle();
-                      for(final Angle ang_9 : _angle_24) {
-                        Angle value_31 = ((Angle) ang_9);
-                        int _angle_25 = value_31.getAngle();
-                        _builder.append(_angle_25, "\t\t\t\t");
-                      }
-                    }
-                    _builder.append(", ");
-                    {
-                      EList<Angle_res> _angle_res = ias_1.getAngle_res();
-                      for(final Angle_res tmp_4 : _angle_res) {
-                        Angle_res value_32 = ((Angle_res) tmp_4);
-                        int _angle_res_1 = value_32.getAngle_res();
-                        _builder.append(_angle_res_1, "\t\t\t\t");
-                      }
-                    }
-                    _builder.append(")");
-                    _builder.newLineIfNotEmpty();
-                    _builder.append("\t\t\t\t");
-                  } else {
-                    boolean _equals_10 = sol.eClass().getName().equals("isAt");
-                    if (_equals_10) {
-                      isAt ia_1 = ((isAt) sol);
-                      _builder.newLineIfNotEmpty();
-                      _builder.append("\t\t\t\t");
-                      _builder.append("Guard: Arm.BaseServo.ServosOperations.");
-                      String _name_22 = sol.eClass().getName();
-                      _builder.append(_name_22, "\t\t\t\t");
-                      _builder.append("(");
-                      {
-                        EList<Angle> _angle1_3 = ia_1.getAngle1();
-                        for(final Angle ang_10 : _angle1_3) {
-                          Angle value_33 = ((Angle) ang_10);
-                          int _angle_26 = value_33.getAngle();
-                          _builder.append(_angle_26, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle> _angle2_3 = ia_1.getAngle2();
-                        for(final Angle ang_11 : _angle2_3) {
-                          Angle value_34 = ((Angle) ang_11);
-                          int _angle_27 = value_34.getAngle();
-                          _builder.append(_angle_27, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle> _angle2_4 = ia_1.getAngle2();
-                        for(final Angle ang_12 : _angle2_4) {
-                          Angle value_35 = ((Angle) ang_12);
-                          int _angle_28 = value_35.getAngle();
-                          _builder.append(_angle_28, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle> _angle4_3 = ia_1.getAngle4();
-                        for(final Angle ang_13 : _angle4_3) {
-                          Angle value_36 = ((Angle) ang_13);
-                          int _angle_29 = value_36.getAngle();
-                          _builder.append(_angle_29, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle> _angle5_3 = ia_1.getAngle5();
-                        for(final Angle ang_14 : _angle5_3) {
-                          Angle value_37 = ((Angle) ang_14);
-                          int _angle_30 = value_37.getAngle();
-                          _builder.append(_angle_30, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle> _angle6_3 = ia_1.getAngle6();
-                        for(final Angle ang_15 : _angle6_3) {
-                          Angle value_38 = ((Angle) ang_15);
-                          int _angle_31 = value_38.getAngle();
-                          _builder.append(_angle_31, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(", ");
-                      {
-                        EList<Angle_res> _angle_res_2 = ia_1.getAngle_res();
-                        for(final Angle_res ang_16 : _angle_res_2) {
-                          Angle_res value_39 = ((Angle_res) ang_16);
-                          int _angle_res_3 = value_39.getAngle_res();
-                          _builder.append(_angle_res_3, "\t\t\t\t");
-                        }
-                      }
-                      _builder.append(")");
-                      _builder.newLineIfNotEmpty();
+                  EList<Servo> _servo_6 = ias_1.getServo();
+                  for(final Servo ser_3 : _servo_6) {
+                    Servo value_30 = ((Servo) ser_3);
+                    int _servo_7 = value_30.getServo();
+                    _builder.append(_servo_7, "\t\t\t\t");
+                  }
+                }
+                _builder.append(", ");
+                {
+                  EList<Angle> _angle_24 = ias_1.getAngle();
+                  for(final Angle ang_9 : _angle_24) {
+                    Angle value_31 = ((Angle) ang_9);
+                    int _angle_25 = value_31.getAngle();
+                    _builder.append(_angle_25, "\t\t\t\t");
+                  }
+                }
+                _builder.append(", ");
+                {
+                  EList<Angle_res> _angle_res = ias_1.getAngle_res();
+                  for(final Angle_res tmp_4 : _angle_res) {
+                    Angle_res value_32 = ((Angle_res) tmp_4);
+                    int _angle_res_1 = value_32.getAngle_res();
+                    _builder.append(_angle_res_1, "\t\t\t\t");
+                  }
+                }
+                _builder.append(")");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t\t\t");
+              } else {
+                boolean _equals_8 = sol.eClass().getName().equals("isAt");
+                if (_equals_8) {
+                  isAt ia_1 = ((isAt) sol);
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t\t\t");
+                  _builder.append("Guard: Arm.BaseServo.ServosOperations.");
+                  String _name_21 = sol.eClass().getName();
+                  _builder.append(_name_21, "\t\t\t\t");
+                  _builder.append("(");
+                  {
+                    EList<Angle> _angle1_3 = ia_1.getAngle1();
+                    for(final Angle ang_10 : _angle1_3) {
+                      Angle value_33 = ((Angle) ang_10);
+                      int _angle_26 = value_33.getAngle();
+                      _builder.append(_angle_26, "\t\t\t\t");
                     }
                   }
+                  _builder.append(", ");
+                  {
+                    EList<Angle> _angle2_3 = ia_1.getAngle2();
+                    for(final Angle ang_11 : _angle2_3) {
+                      Angle value_34 = ((Angle) ang_11);
+                      int _angle_27 = value_34.getAngle();
+                      _builder.append(_angle_27, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(", ");
+                  {
+                    EList<Angle> _angle2_4 = ia_1.getAngle2();
+                    for(final Angle ang_12 : _angle2_4) {
+                      Angle value_35 = ((Angle) ang_12);
+                      int _angle_28 = value_35.getAngle();
+                      _builder.append(_angle_28, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(", ");
+                  {
+                    EList<Angle> _angle4_3 = ia_1.getAngle4();
+                    for(final Angle ang_13 : _angle4_3) {
+                      Angle value_36 = ((Angle) ang_13);
+                      int _angle_29 = value_36.getAngle();
+                      _builder.append(_angle_29, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(", ");
+                  {
+                    EList<Angle> _angle5_3 = ia_1.getAngle5();
+                    for(final Angle ang_14 : _angle5_3) {
+                      Angle value_37 = ((Angle) ang_14);
+                      int _angle_30 = value_37.getAngle();
+                      _builder.append(_angle_30, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(", ");
+                  {
+                    EList<Angle> _angle6_3 = ia_1.getAngle6();
+                    for(final Angle ang_15 : _angle6_3) {
+                      Angle value_38 = ((Angle) ang_15);
+                      int _angle_31 = value_38.getAngle();
+                      _builder.append(_angle_31, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(", ");
+                  {
+                    EList<Angle_res> _angle_res_2 = ia_1.getAngle_res();
+                    for(final Angle_res ang_16 : _angle_res_2) {
+                      Angle_res value_39 = ((Angle_res) ang_16);
+                      int _angle_res_3 = value_39.getAngle_res();
+                      _builder.append(_angle_res_3, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(")");
+                  _builder.newLineIfNotEmpty();
                 }
               }
             }

@@ -35,9 +35,9 @@ class CPtesterGenerator extends AbstractGenerator {
 		'''
 		«var counterTime = 0»
 		«var counterLength = 0»
-		«var solutionLength = 0»
+		«var maxTime = 0»
 		«var errorLenght = 0»
-		
+		«var condName = ""»
 		Class: Machine
 			StateMachine: «scenario.surname»
 				PseudoState: «FOR giv : scenario.given.initial»«giv.eClass.name»«ENDFOR»
@@ -86,19 +86,21 @@ class CPtesterGenerator extends AbstractGenerator {
 						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«ENDFOR»)
 						«ENDIF»«ENDFOR»
 						
-				Transition: («scenario.when.eClass.name»->Error)
-						Guard: «FOR and : scenario.and»«FOR cond : and.conditions»«{errorLenght++;""}»«IF errorLenght == scenario.and.length»«cond.name»(oRunTime, «FOR tm : cond.time»«var value = tm as Time»«value.time»«ENDFOR»«ENDIF»«ENDFOR»«ENDFOR»)
-						
+				Transition: («scenario.when.eClass.name»->Error)						
+						«FOR and : scenario.and»«FOR cond : and.conditions»«FOR tm : cond.time»«var value = tm as Time»		
+						«IF value.time > maxTime»
+						«{maxTime = value.time; "" }»
+						«{condName = cond.name; "" }»
+						«ENDIF»«ENDFOR»«ENDFOR»«ENDFOR»						
+						Guard: «condName»(oRuntime, «maxTime»)
+		
 				Transition: («scenario.when.eClass.name»->Final)		
 						«FOR and : scenario.and»
 						«FOR sol : and.solution»
-						«{solutionLength++; ""}»
-						«IF solutionLength == scenario.and.length»
 						«IF sol.eClass.name.equals('isAtSingle')»«var ias = sol as isAtSingle»
 						Guard: Arm.BaseServo.ServosOperations.«sol.eClass.name»(«FOR ser : ias.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : ias.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : ias.angle_res»«var value = tmp as Angle_res»«value.angle_res»«ENDFOR»)
 						«ELSEIF sol.eClass.name.equals('isAt')»«var ia = sol as isAt»
 						Guard: Arm.BaseServo.ServosOperations.«sol.eClass.name»(«FOR ang : ia.angle1»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle2»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle4»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle5»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle6»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR ang : ia.angle_res»«var value = ang as Angle_res»«value.angle_res»«ENDFOR»)
-						«ENDIF»
 						«ENDIF»
 						«ENDFOR»
 						«ENDFOR»
