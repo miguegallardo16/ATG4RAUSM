@@ -1,13 +1,16 @@
 Scenario "TestingOperations"
 {
 	GIVEN posInicial(1000)
-	AND rotateAllServos(45,45,45,45,45,45,1000)
-	AND rotateServo(1,45,2000)
-	AND rotateServo(2,90,2000)
-	AND rotateAllServos(20,20,20,20,20,20,1000)
- 	WHEN rotateServo(1,45,2000)
-	THEN result(1000)
-	AND NotLaterThan(2000) Query isAtSingle(1,45,2)
-	AND NotLaterThan(3000) Query isAtSingle(1,60,2)
-	AND NotLaterThan(2000) Query isAtSingle(1,1,1)
-}
+	AND buzzerOn(10)
+	AND buzzerOff()
+	AND cameraColor(100)
+	AND colorConfiguration("Rojo",1,1,1,1,1,1)
+	AND deleteColor("Rojo")
+	AND lightRGB(1,1,1)
+	AND readAllServos() 
+	AND readServo(4)
+	AND rotateAllServos(1,1,1,1,1,1,1) 
+	WHEN rotateServo(1,2,3)
+	THEN result(1)
+	AND NotLaterThan(1) Query isAtSingle(1,1,1)
+} 

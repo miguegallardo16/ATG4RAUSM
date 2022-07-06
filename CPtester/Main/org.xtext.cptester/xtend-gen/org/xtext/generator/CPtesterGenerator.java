@@ -856,6 +856,252 @@ public class CPtesterGenerator extends AbstractGenerator {
               }
               _builder.append(")");
               _builder.newLineIfNotEmpty();
+              _builder.append("\t\t\t\t");
+            } else {
+              boolean _equals_15 = cmd_2.eClass().getName().equals("readAllServos");
+              if (_equals_15) {
+                readAllServos ras_1 = ((readAllServos) cmd_2);
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t\t\t");
+                _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                String _name_26 = cmd_2.eClass().getName();
+                _builder.append(_name_26, "\t\t\t\t");
+                _builder.append("()");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t\t\t");
+              } else {
+                boolean _equals_16 = cmd_2.eClass().getName().equals("readServo");
+                if (_equals_16) {
+                  readServo rs_1 = ((readServo) cmd_2);
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t\t\t");
+                  _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                  String _name_27 = cmd_2.eClass().getName();
+                  _builder.append(_name_27, "\t\t\t\t");
+                  _builder.append("(");
+                  {
+                    EList<Servo> _servo_8 = rs_1.getServo();
+                    for(final Servo ser_4 : _servo_8) {
+                      Servo value_43 = ((Servo) ser_4);
+                      int _servo_9 = value_43.getServo();
+                      _builder.append(_servo_9, "\t\t\t\t");
+                    }
+                  }
+                  _builder.append(")");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t\t\t");
+                } else {
+                  boolean _equals_17 = cmd_2.eClass().getName().equals("cameraColor");
+                  if (_equals_17) {
+                    cameraColor cc_1 = ((cameraColor) cmd_2);
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t\t\t\t");
+                    _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                    String _name_28 = cmd_2.eClass().getName();
+                    _builder.append(_name_28, "\t\t\t\t");
+                    _builder.append("(");
+                    {
+                      EList<Time> _time_15 = cc_1.getTime();
+                      for(final Time tm_4 : _time_15) {
+                        Time value_44 = ((Time) tm_4);
+                        int _time_16 = value_44.getTime();
+                        _builder.append(_time_16, "\t\t\t\t");
+                        String _xblockexpression_6 = null;
+                        {
+                          int _counterTime = counterTime;
+                          int _time_17 = value_44.getTime();
+                          counterTime = (_counterTime + _time_17);
+                          _xblockexpression_6 = "";
+                        }
+                        _builder.append(_xblockexpression_6, "\t\t\t\t");
+                      }
+                    }
+                    _builder.append(")");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t\t\t\t");
+                  } else {
+                    boolean _equals_18 = cmd_2.eClass().getName().equals("colorConfiguration");
+                    if (_equals_18) {
+                      colorConfiguration ccon_1 = ((colorConfiguration) cmd_2);
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t\t\t");
+                      _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                      String _name_29 = cmd_2.eClass().getName();
+                      _builder.append(_name_29, "\t\t\t\t");
+                      _builder.append("(");
+                      {
+                        EList<Color> _color_4 = ccon_1.getColor();
+                        for(final Color color_2 : _color_4) {
+                          Color value_45 = ((Color) color_2);
+                          String _color_5 = value_45.getColor();
+                          _builder.append(_color_5, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<H_min> _h_min_2 = ccon_1.getH_min();
+                        for(final H_min hMin_1 : _h_min_2) {
+                          H_min value_46 = ((H_min) hMin_1);
+                          int _h_min_3 = value_46.getH_min();
+                          _builder.append(_h_min_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<S_min> _s_min_2 = ccon_1.getS_min();
+                        for(final S_min sMin_1 : _s_min_2) {
+                          S_min value_47 = ((S_min) sMin_1);
+                          int _s_min_3 = value_47.getS_min();
+                          _builder.append(_s_min_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<V_min> _v_min_2 = ccon_1.getV_min();
+                        for(final V_min vMin_1 : _v_min_2) {
+                          V_min value_48 = ((V_min) vMin_1);
+                          int _v_min_3 = value_48.getV_min();
+                          _builder.append(_v_min_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<H_max> _h_max_2 = ccon_1.getH_max();
+                        for(final H_max hMax_1 : _h_max_2) {
+                          H_max value_49 = ((H_max) hMax_1);
+                          int _h_max_3 = value_49.getH_max();
+                          _builder.append(_h_max_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<S_max> _s_max_2 = ccon_1.getS_max();
+                        for(final S_max sMax_1 : _s_max_2) {
+                          S_max value_50 = ((S_max) sMax_1);
+                          int _s_max_3 = value_50.getS_max();
+                          _builder.append(_s_max_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(", ");
+                      {
+                        EList<V_max> _v_max_2 = ccon_1.getV_max();
+                        for(final V_max vMax_1 : _v_max_2) {
+                          V_max value_51 = ((V_max) vMax_1);
+                          int _v_max_3 = value_51.getV_max();
+                          _builder.append(_v_max_3, "\t\t\t\t");
+                        }
+                      }
+                      _builder.append(")");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t\t\t");
+                    } else {
+                      boolean _equals_19 = cmd_2.eClass().getName().equals("deleteColor");
+                      if (_equals_19) {
+                        deleteColor dc_1 = ((deleteColor) cmd_2);
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t\t\t");
+                        _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                        String _name_30 = cmd_2.eClass().getName();
+                        _builder.append(_name_30, "\t\t\t\t");
+                        _builder.append("(");
+                        {
+                          EList<Color> _color_6 = dc_1.getColor();
+                          for(final Color color_3 : _color_6) {
+                            Color value_52 = ((Color) color_3);
+                            String _color_7 = value_52.getColor();
+                            _builder.append(_color_7, "\t\t\t\t");
+                          }
+                        }
+                        _builder.append(")");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t\t\t");
+                      } else {
+                        boolean _equals_20 = cmd_2.eClass().getName().equals("buzzerOn");
+                        if (_equals_20) {
+                          buzzerOn bon_1 = ((buzzerOn) cmd_2);
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t\t\t");
+                          _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                          String _name_31 = cmd_2.eClass().getName();
+                          _builder.append(_name_31, "\t\t\t\t");
+                          _builder.append("(");
+                          {
+                            EList<Time> _time_17 = bon_1.getTime();
+                            for(final Time tm_5 : _time_17) {
+                              Time value_53 = ((Time) tm_5);
+                              int _time_18 = value_53.getTime();
+                              _builder.append(_time_18, "\t\t\t\t");
+                              String _xblockexpression_7 = null;
+                              {
+                                int _counterTime = counterTime;
+                                int _time_19 = value_53.getTime();
+                                counterTime = (_counterTime + _time_19);
+                                _xblockexpression_7 = "";
+                              }
+                              _builder.append(_xblockexpression_7, "\t\t\t\t");
+                            }
+                          }
+                          _builder.append(")");
+                          _builder.newLineIfNotEmpty();
+                          _builder.append("\t\t\t\t");
+                        } else {
+                          boolean _equals_21 = cmd_2.eClass().getName().equals("buzzerOff");
+                          if (_equals_21) {
+                            buzzerOff boff_1 = ((buzzerOff) cmd_2);
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t\t\t");
+                            _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                            String _name_32 = cmd_2.eClass().getName();
+                            _builder.append(_name_32, "\t\t\t\t");
+                            _builder.append("()");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t\t\t");
+                          } else {
+                            boolean _equals_22 = cmd_2.eClass().getName().equals("lightRGB");
+                            if (_equals_22) {
+                              lightRGB rgb_1 = ((lightRGB) cmd_2);
+                              _builder.newLineIfNotEmpty();
+                              _builder.append("\t\t\t\t");
+                              _builder.append("Activity: Arm.BaseServo.ServosOperations.");
+                              String _name_33 = cmd_2.eClass().getName();
+                              _builder.append(_name_33, "\t\t\t\t");
+                              _builder.append("(");
+                              {
+                                EList<R> _r_2 = rgb_1.getR();
+                                for(final R r_1 : _r_2) {
+                                  R value_54 = ((R) r_1);
+                                  int _r_3 = value_54.getR();
+                                  _builder.append(_r_3, "\t\t\t\t");
+                                }
+                              }
+                              _builder.append(", ");
+                              {
+                                EList<G> _g_2 = rgb_1.getG();
+                                for(final G g_1 : _g_2) {
+                                  G value_55 = ((G) g_1);
+                                  int _g_3 = value_55.getG();
+                                  _builder.append(_g_3, "\t\t\t\t");
+                                }
+                              }
+                              _builder.append(", ");
+                              {
+                                EList<B> _b_2 = rgb_1.getB();
+                                for(final B b_1 : _b_2) {
+                                  B value_56 = ((B) b_1);
+                                  int _b_3 = value_56.getB();
+                                  _builder.append(_b_3, "\t\t\t\t");
+                                }
+                              }
+                              _builder.append(")");
+                              _builder.newLineIfNotEmpty();
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -865,8 +1111,8 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_26 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_26, "\t\t");
+    String _name_34 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_34, "\t\t");
     _builder.append("->Error)\t\t\t\t\t\t");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t");
@@ -877,30 +1123,30 @@ public class CPtesterGenerator extends AbstractGenerator {
           EList<Conditions> _conditions = and.getConditions();
           for(final Conditions cond : _conditions) {
             {
-              EList<Time> _time_15 = cond.getTime();
-              for(final Time tm_4 : _time_15) {
-                Time value_43 = ((Time) tm_4);
+              EList<Time> _time_19 = cond.getTime();
+              for(final Time tm_6 : _time_19) {
+                Time value_57 = ((Time) tm_6);
                 _builder.append("\t\t");
                 _builder.newLineIfNotEmpty();
                 {
-                  int _time_16 = value_43.getTime();
-                  boolean _greaterThan = (_time_16 > maxTime);
+                  int _time_20 = value_57.getTime();
+                  boolean _greaterThan = (_time_20 > maxTime);
                   if (_greaterThan) {
                     _builder.append("\t\t\t\t");
-                    String _xblockexpression_6 = null;
+                    String _xblockexpression_8 = null;
                     {
-                      maxTime = value_43.getTime();
-                      _xblockexpression_6 = "";
+                      maxTime = value_57.getTime();
+                      _xblockexpression_8 = "";
                     }
-                    _builder.append(_xblockexpression_6, "\t\t\t\t");
+                    _builder.append(_xblockexpression_8, "\t\t\t\t");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t\t\t");
-                    String _xblockexpression_7 = null;
+                    String _xblockexpression_9 = null;
                     {
                       condName = cond.getName();
-                      _xblockexpression_7 = "";
+                      _xblockexpression_9 = "";
                     }
-                    _builder.append(_xblockexpression_7, "\t\t\t\t");
+                    _builder.append(_xblockexpression_9, "\t\t\t\t");
                     _builder.newLineIfNotEmpty();
                   }
                 }
@@ -920,8 +1166,8 @@ public class CPtesterGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("Transition: (");
-    String _name_27 = scenario.getWhen().eClass().getName();
-    _builder.append(_name_27, "\t\t");
+    String _name_35 = scenario.getWhen().eClass().getName();
+    _builder.append(_name_35, "\t\t");
     _builder.append("->Final)\t\t");
     _builder.newLineIfNotEmpty();
     {
@@ -932,29 +1178,29 @@ public class CPtesterGenerator extends AbstractGenerator {
           for(final Solution sol : _solution) {
             _builder.append("\t\t\t\t");
             {
-              boolean _equals_15 = sol.eClass().getName().equals("isAtSingle");
-              if (_equals_15) {
+              boolean _equals_23 = sol.eClass().getName().equals("isAtSingle");
+              if (_equals_23) {
                 isAtSingle ias_1 = ((isAtSingle) sol);
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
                 _builder.append("Guard: Arm.BaseServo.ServosOperations.");
-                String _name_28 = sol.eClass().getName();
-                _builder.append(_name_28, "\t\t\t\t");
+                String _name_36 = sol.eClass().getName();
+                _builder.append(_name_36, "\t\t\t\t");
                 _builder.append("(");
                 {
-                  EList<Servo> _servo_8 = ias_1.getServo();
-                  for(final Servo ser_4 : _servo_8) {
-                    Servo value_44 = ((Servo) ser_4);
-                    int _servo_9 = value_44.getServo();
-                    _builder.append(_servo_9, "\t\t\t\t");
+                  EList<Servo> _servo_10 = ias_1.getServo();
+                  for(final Servo ser_5 : _servo_10) {
+                    Servo value_58 = ((Servo) ser_5);
+                    int _servo_11 = value_58.getServo();
+                    _builder.append(_servo_11, "\t\t\t\t");
                   }
                 }
                 _builder.append(", ");
                 {
                   EList<Angle> _angle_24 = ias_1.getAngle();
                   for(final Angle ang_9 : _angle_24) {
-                    Angle value_45 = ((Angle) ang_9);
-                    int _angle_25 = value_45.getAngle();
+                    Angle value_59 = ((Angle) ang_9);
+                    int _angle_25 = value_59.getAngle();
                     _builder.append(_angle_25, "\t\t\t\t");
                   }
                 }
@@ -962,8 +1208,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                 {
                   EList<Angle_res> _angle_res = ias_1.getAngle_res();
                   for(final Angle_res tmp_4 : _angle_res) {
-                    Angle_res value_46 = ((Angle_res) tmp_4);
-                    int _angle_res_1 = value_46.getAngle_res();
+                    Angle_res value_60 = ((Angle_res) tmp_4);
+                    int _angle_res_1 = value_60.getAngle_res();
                     _builder.append(_angle_res_1, "\t\t\t\t");
                   }
                 }
@@ -971,20 +1217,20 @@ public class CPtesterGenerator extends AbstractGenerator {
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t\t\t");
               } else {
-                boolean _equals_16 = sol.eClass().getName().equals("isAt");
-                if (_equals_16) {
+                boolean _equals_24 = sol.eClass().getName().equals("isAt");
+                if (_equals_24) {
                   isAt ia_1 = ((isAt) sol);
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t\t\t");
                   _builder.append("Guard: Arm.BaseServo.ServosOperations.");
-                  String _name_29 = sol.eClass().getName();
-                  _builder.append(_name_29, "\t\t\t\t");
+                  String _name_37 = sol.eClass().getName();
+                  _builder.append(_name_37, "\t\t\t\t");
                   _builder.append("(");
                   {
                     EList<Angle> _angle1_3 = ia_1.getAngle1();
                     for(final Angle ang_10 : _angle1_3) {
-                      Angle value_47 = ((Angle) ang_10);
-                      int _angle_26 = value_47.getAngle();
+                      Angle value_61 = ((Angle) ang_10);
+                      int _angle_26 = value_61.getAngle();
                       _builder.append(_angle_26, "\t\t\t\t");
                     }
                   }
@@ -992,8 +1238,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle> _angle2_3 = ia_1.getAngle2();
                     for(final Angle ang_11 : _angle2_3) {
-                      Angle value_48 = ((Angle) ang_11);
-                      int _angle_27 = value_48.getAngle();
+                      Angle value_62 = ((Angle) ang_11);
+                      int _angle_27 = value_62.getAngle();
                       _builder.append(_angle_27, "\t\t\t\t");
                     }
                   }
@@ -1001,8 +1247,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle> _angle2_4 = ia_1.getAngle2();
                     for(final Angle ang_12 : _angle2_4) {
-                      Angle value_49 = ((Angle) ang_12);
-                      int _angle_28 = value_49.getAngle();
+                      Angle value_63 = ((Angle) ang_12);
+                      int _angle_28 = value_63.getAngle();
                       _builder.append(_angle_28, "\t\t\t\t");
                     }
                   }
@@ -1010,8 +1256,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle> _angle4_3 = ia_1.getAngle4();
                     for(final Angle ang_13 : _angle4_3) {
-                      Angle value_50 = ((Angle) ang_13);
-                      int _angle_29 = value_50.getAngle();
+                      Angle value_64 = ((Angle) ang_13);
+                      int _angle_29 = value_64.getAngle();
                       _builder.append(_angle_29, "\t\t\t\t");
                     }
                   }
@@ -1019,8 +1265,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle> _angle5_3 = ia_1.getAngle5();
                     for(final Angle ang_14 : _angle5_3) {
-                      Angle value_51 = ((Angle) ang_14);
-                      int _angle_30 = value_51.getAngle();
+                      Angle value_65 = ((Angle) ang_14);
+                      int _angle_30 = value_65.getAngle();
                       _builder.append(_angle_30, "\t\t\t\t");
                     }
                   }
@@ -1028,8 +1274,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle> _angle6_3 = ia_1.getAngle6();
                     for(final Angle ang_15 : _angle6_3) {
-                      Angle value_52 = ((Angle) ang_15);
-                      int _angle_31 = value_52.getAngle();
+                      Angle value_66 = ((Angle) ang_15);
+                      int _angle_31 = value_66.getAngle();
                       _builder.append(_angle_31, "\t\t\t\t");
                     }
                   }
@@ -1037,8 +1283,8 @@ public class CPtesterGenerator extends AbstractGenerator {
                   {
                     EList<Angle_res> _angle_res_2 = ia_1.getAngle_res();
                     for(final Angle_res ang_16 : _angle_res_2) {
-                      Angle_res value_53 = ((Angle_res) ang_16);
-                      int _angle_res_3 = value_53.getAngle_res();
+                      Angle_res value_67 = ((Angle_res) ang_16);
+                      int _angle_res_3 = value_67.getAngle_res();
                       _builder.append(_angle_res_3, "\t\t\t\t");
                     }
                   }

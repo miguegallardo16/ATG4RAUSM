@@ -9,11 +9,16 @@ Class: Machine
 		
 		State: Given
 				Activity: Arm.BaseServo.ServosOperations.posInicial(1000)
-				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(45, 45, 45, 45, 45, 45, 1000)
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 45, 2000)
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(2, 90, 2000)
-				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(20, 20, 20, 20, 20, 20, 1000)
-					
+				Activity: Arm.BaseServo.ServosOperations.buzzerOn(10)
+				Activity: Arm.BaseServo.ServosOperations.buzzerOff()
+				Activity: Arm.BaseServo.ServosOperations.cameraColor(100)
+				Activity: Arm.BaseServo.ServosOperations.colorConfiguration(Rojo, 1, 1, 1, 1, 1, 1)
+				Activity: Arm.BaseServo.ServosOperations.deleteColor(Rojo)
+				Activity: Arm.BaseServo.ServosOperations.lightRGB(1, 1, 1)
+				Activity: Arm.BaseServo.ServosOperations.readAllServos()
+				Activity: Arm.BaseServo.ServosOperations.readServo(4)
+				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(1, 1, 1, 1, 1, 1, 1)
+									
 		State: GivenWarning
 				Activity: MessReport(mWarning, "Warning Time")
 		
@@ -21,18 +26,16 @@ Class: Machine
 				Guard: []			
 					
 		Transition: (Given->GivenWarning)
-				Guard: Arm.BaseServo.ServosOperations.Time(7000)
+				Guard: Arm.BaseServo.ServosOperations.Time(1111)
 					
 		Transition: (Given->When)				
-				Guard: Arm.BaseServo.ServosOperations.isAt(20, 20, 20, 20, 20, 20, 2)
+				Guard: Arm.BaseServo.ServosOperations.isAt(1, 1, 1, 1, 1, 1, 2)
 				
 		State:  When
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 45, 2000)
+				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 2, 3)
 								
 		Transition: (When->Error)						
-				Guard: NotLaterThan(oRuntime, 3000)
+				Guard: NotLaterThan(oRuntime, 1)
 
 		Transition: (When->Final)		
-				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 45, 2)
-				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 60, 2)
 				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 1, 1)
