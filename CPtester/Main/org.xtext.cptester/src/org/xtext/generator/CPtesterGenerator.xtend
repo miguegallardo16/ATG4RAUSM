@@ -16,6 +16,25 @@ import org.xtext.operations.rotateServo
 import org.xtext.operations.isAtSingle
 import org.xtext.operations.isAt
 import org.xtext.operations.Angle_res
+import org.xtext.operations.readAllServos
+import org.xtext.operations.readServo
+import org.xtext.operations.cameraColor
+import org.xtext.operations.colorConfiguration
+import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock
+import org.xtext.operations.Color
+import org.xtext.operations.H_min
+import org.xtext.operations.S_min
+import org.xtext.operations.V_min
+import org.xtext.operations.H_max
+import org.xtext.operations.S_max
+import org.xtext.operations.V_max
+import org.xtext.operations.deleteColor
+import org.xtext.operations.buzzerOff
+import org.xtext.operations.buzzerOn
+import org.xtext.operations.lightRGB
+import org.xtext.operations.R
+import org.xtext.operations.G
+import org.xtext.operations.B
 
 /**
  * Generates code from your model files on save.
@@ -54,6 +73,22 @@ class CPtesterGenerator extends AbstractGenerator {
 						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rot.servo»«var value = ser as Servo»«value.servo»«ENDFOR», «FOR ang : rot.angle»«var value = ang as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»)
 						«ELSEIF cmd.eClass.name.equals('rotateAllServos')»«var rot = cmd as rotateAllServos»
 						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ang1 : rot.angle1»«var value = ang1 as Angle»«value.angle»«ENDFOR», «FOR ang2 : rot.angle2»«var value = ang2 as Angle»«value.angle»«ENDFOR», «FOR ang3 : rot.angle3»«var value = ang3 as Angle»«value.angle»«ENDFOR», «FOR ang4 : rot.angle4»«var value = ang4 as Angle»«value.angle»«ENDFOR», «FOR ang5 : rot.angle5»«var value = ang5 as Angle»«value.angle»«ENDFOR», «FOR ang6 : rot.angle6»«var value = ang6 as Angle»«value.angle»«ENDFOR», «FOR tmp : rot.time»«var value = tmp as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('readAllServos')»«var ras = cmd as readAllServos»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»()
+						«ELSEIF cmd.eClass.name.equals('readServo')»«var rs = cmd as readServo»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR ser : rs.servo»«var value = ser as Servo»«value.servo»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('cameraColor')»«var cc = cmd as cameraColor»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR tm : cc.time»«var value = tm as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('colorConfiguration')»«var ccon = cmd as colorConfiguration»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR color : ccon.color »«var value = color as Color»«value.color»«ENDFOR», «FOR hMin : ccon.h_min»«var value = hMin as H_min»«value.h_min»«ENDFOR», «FOR sMin : ccon.s_min»«var value = sMin as S_min»«value.s_min»«ENDFOR», «FOR vMin : ccon.v_min»«var value = vMin as V_min»«value.v_min»«ENDFOR», «FOR hMax : ccon.h_max»«var value = hMax as H_max»«value.h_max»«ENDFOR», «FOR sMax : ccon.s_max»«var value = sMax as S_max»«value.s_max»«ENDFOR», «FOR vMax : ccon.v_max»«var value = vMax as V_max»«value.v_max»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('deleteColor')»«var dc = cmd as deleteColor»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR color : dc.color »«var value = color as Color»«value.color»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('buzzerOn')»«var bon = cmd as buzzerOn»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR tm : bon.time»«var value = tm as Time»«value.time»«{counterTime+=value.time; "" }»«ENDFOR»)
+						«ELSEIF cmd.eClass.name.equals('buzzerOff')»«var boff = cmd as buzzerOff»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»()
+						«ELSEIF cmd.eClass.name.equals('lightRGB')»«var rgb = cmd as lightRGB»
+						Activity: Arm.BaseServo.ServosOperations.«cmd.eClass.name»(«FOR r : rgb.r»«var value = r as R»«value.r»«ENDFOR», «FOR g : rgb.g»«var value = g as G»«value.g»«ENDFOR», «FOR b : rgb.b»«var value = b as B»«value.b»«ENDFOR»)
 						«ENDIF»«ENDFOR»«ENDFOR»
 							
 				State: «scenario.given.eClass.name»Warning

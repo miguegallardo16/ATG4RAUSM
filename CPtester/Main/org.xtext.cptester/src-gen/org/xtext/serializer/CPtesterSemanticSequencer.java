@@ -20,14 +20,32 @@ import org.xtext.cPtester.Then;
 import org.xtext.cPtester.When;
 import org.xtext.operations.Angle;
 import org.xtext.operations.Angle_res;
+import org.xtext.operations.B;
+import org.xtext.operations.Color;
 import org.xtext.operations.Conditions;
+import org.xtext.operations.G;
+import org.xtext.operations.H_max;
+import org.xtext.operations.H_min;
 import org.xtext.operations.Initial;
 import org.xtext.operations.OperationsPackage;
+import org.xtext.operations.R;
 import org.xtext.operations.Result;
+import org.xtext.operations.S_max;
+import org.xtext.operations.S_min;
 import org.xtext.operations.Servo;
 import org.xtext.operations.Time;
+import org.xtext.operations.V_max;
+import org.xtext.operations.V_min;
+import org.xtext.operations.buzzerOff;
+import org.xtext.operations.buzzerOn;
+import org.xtext.operations.cameraColor;
+import org.xtext.operations.colorConfiguration;
+import org.xtext.operations.deleteColor;
 import org.xtext.operations.isAt;
 import org.xtext.operations.isAtSingle;
+import org.xtext.operations.lightRGB;
+import org.xtext.operations.readAllServos;
+import org.xtext.operations.readServo;
 import org.xtext.operations.rotateAllServos;
 import org.xtext.operations.rotateServo;
 import org.xtext.services.CPtesterGrammarAccess;
@@ -73,14 +91,38 @@ public class CPtesterSemanticSequencer extends OperationsSemanticSequencer {
 			case OperationsPackage.ANGLE_RES:
 				sequence_Angle_res(context, (Angle_res) semanticObject); 
 				return; 
+			case OperationsPackage.B:
+				sequence_B(context, (B) semanticObject); 
+				return; 
+			case OperationsPackage.COLOR:
+				sequence_Color(context, (Color) semanticObject); 
+				return; 
 			case OperationsPackage.CONDITIONS:
 				sequence_Conditions(context, (Conditions) semanticObject); 
+				return; 
+			case OperationsPackage.G:
+				sequence_G(context, (G) semanticObject); 
+				return; 
+			case OperationsPackage.HMAX:
+				sequence_H_max(context, (H_max) semanticObject); 
+				return; 
+			case OperationsPackage.HMIN:
+				sequence_H_min(context, (H_min) semanticObject); 
 				return; 
 			case OperationsPackage.INITIAL:
 				sequence_Initial(context, (Initial) semanticObject); 
 				return; 
+			case OperationsPackage.R:
+				sequence_R(context, (R) semanticObject); 
+				return; 
 			case OperationsPackage.RESULT:
 				sequence_Result(context, (Result) semanticObject); 
+				return; 
+			case OperationsPackage.SMAX:
+				sequence_S_max(context, (S_max) semanticObject); 
+				return; 
+			case OperationsPackage.SMIN:
+				sequence_S_min(context, (S_min) semanticObject); 
 				return; 
 			case OperationsPackage.SERVO:
 				sequence_Servo(context, (Servo) semanticObject); 
@@ -88,11 +130,41 @@ public class CPtesterSemanticSequencer extends OperationsSemanticSequencer {
 			case OperationsPackage.TIME:
 				sequence_Time(context, (Time) semanticObject); 
 				return; 
+			case OperationsPackage.VMAX:
+				sequence_V_max(context, (V_max) semanticObject); 
+				return; 
+			case OperationsPackage.VMIN:
+				sequence_V_min(context, (V_min) semanticObject); 
+				return; 
+			case OperationsPackage.BUZZER_OFF:
+				sequence_buzzerOff(context, (buzzerOff) semanticObject); 
+				return; 
+			case OperationsPackage.BUZZER_ON:
+				sequence_buzzerOn(context, (buzzerOn) semanticObject); 
+				return; 
+			case OperationsPackage.CAMERA_COLOR:
+				sequence_cameraColor(context, (cameraColor) semanticObject); 
+				return; 
+			case OperationsPackage.COLOR_CONFIGURATION:
+				sequence_colorConfiguration(context, (colorConfiguration) semanticObject); 
+				return; 
+			case OperationsPackage.DELETE_COLOR:
+				sequence_deleteColor(context, (deleteColor) semanticObject); 
+				return; 
 			case OperationsPackage.IS_AT:
 				sequence_isAt(context, (isAt) semanticObject); 
 				return; 
 			case OperationsPackage.IS_AT_SINGLE:
 				sequence_isAtSingle(context, (isAtSingle) semanticObject); 
+				return; 
+			case OperationsPackage.LIGHT_RGB:
+				sequence_lightRGB(context, (lightRGB) semanticObject); 
+				return; 
+			case OperationsPackage.READ_ALL_SERVOS:
+				sequence_readAllServos(context, (readAllServos) semanticObject); 
+				return; 
+			case OperationsPackage.READ_SERVO:
+				sequence_readServo(context, (readServo) semanticObject); 
 				return; 
 			case OperationsPackage.ROTATE_ALL_SERVOS:
 				sequence_rotateAllServos(context, (rotateAllServos) semanticObject); 

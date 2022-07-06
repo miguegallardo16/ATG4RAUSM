@@ -12,17 +12,32 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.operations.Angle;
 import org.xtext.operations.Angle_res;
+import org.xtext.operations.Color;
 import org.xtext.operations.Command;
 import org.xtext.operations.Conditions;
+import org.xtext.operations.H_max;
+import org.xtext.operations.H_min;
 import org.xtext.operations.Initial;
 import org.xtext.operations.OperationsFactory;
 import org.xtext.operations.OperationsPackage;
 import org.xtext.operations.Result;
+import org.xtext.operations.S_max;
+import org.xtext.operations.S_min;
 import org.xtext.operations.Servo;
 import org.xtext.operations.Solution;
 import org.xtext.operations.Time;
+import org.xtext.operations.V_max;
+import org.xtext.operations.V_min;
+import org.xtext.operations.buzzerOff;
+import org.xtext.operations.buzzerOn;
+import org.xtext.operations.cameraColor;
+import org.xtext.operations.colorConfiguration;
+import org.xtext.operations.deleteColor;
 import org.xtext.operations.isAt;
 import org.xtext.operations.isAtSingle;
+import org.xtext.operations.lightRGB;
+import org.xtext.operations.readAllServos;
+import org.xtext.operations.readServo;
 import org.xtext.operations.rotateAllServos;
 import org.xtext.operations.rotateServo;
 
@@ -47,6 +62,62 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   private EClass commandEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lightRGBEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass buzzerOffEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass buzzerOnEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass deleteColorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorConfigurationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cameraColorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass readAllServosEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass readServoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,6 +195,76 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   private EClass servoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass v_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass s_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass h_maxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass v_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass s_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass h_minEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -249,9 +390,240 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getCommand_Time()
+  public EClass getlightRGB()
   {
-    return (EReference)commandEClass.getEStructuralFeatures().get(1);
+    return lightRGBEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getlightRGB_R()
+  {
+    return (EReference)lightRGBEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getlightRGB_G()
+  {
+    return (EReference)lightRGBEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getlightRGB_B()
+  {
+    return (EReference)lightRGBEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getbuzzerOff()
+  {
+    return buzzerOffEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getbuzzerOn()
+  {
+    return buzzerOnEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getbuzzerOn_Time()
+  {
+    return (EReference)buzzerOnEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getdeleteColor()
+  {
+    return deleteColorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getdeleteColor_Color()
+  {
+    return (EReference)deleteColorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getcolorConfiguration()
+  {
+    return colorConfigurationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_Color()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_H_min()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_S_min()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_V_min()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_H_max()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_S_max()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcolorConfiguration_V_max()
+  {
+    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getcameraColor()
+  {
+    return cameraColorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getcameraColor_Time()
+  {
+    return (EReference)cameraColorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getreadAllServos()
+  {
+    return readAllServosEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getreadServo()
+  {
+    return readServoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getreadServo_Servo()
+  {
+    return (EReference)readServoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -285,6 +657,17 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
   public EReference getrotateServo_Angle()
   {
     return (EReference)rotateServoEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateServo_Time()
+  {
+    return (EReference)rotateServoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -362,6 +745,17 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
   public EReference getrotateAllServos_Angle6()
   {
     return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getrotateAllServos_Time()
+  {
+    return (EReference)rotateAllServosEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -667,6 +1061,226 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
+  public EClass getV_max()
+  {
+    return v_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getV_max_V_max()
+  {
+    return (EAttribute)v_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getS_max()
+  {
+    return s_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getS_max_S_max()
+  {
+    return (EAttribute)s_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getH_max()
+  {
+    return h_maxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getH_max_H_max()
+  {
+    return (EAttribute)h_maxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getV_min()
+  {
+    return v_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getV_min_V_min()
+  {
+    return (EAttribute)v_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getS_min()
+  {
+    return s_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getS_min_S_min()
+  {
+    return (EAttribute)s_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getH_min()
+  {
+    return h_minEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getH_min_H_min()
+  {
+    return (EAttribute)h_minEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getColor()
+  {
+    return colorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getColor_Color()
+  {
+    return (EAttribute)colorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getB()
+  {
+    return bEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getB_B()
+  {
+    return (EAttribute)bEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getG()
+  {
+    return gEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getG_G()
+  {
+    return (EAttribute)gEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getR()
+  {
+    return rEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getR_R()
+  {
+    return (EAttribute)rEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public OperationsFactory getOperationsFactory()
   {
     return (OperationsFactory)getEFactoryInstance();
@@ -698,11 +1312,41 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     commandEClass = createEClass(COMMAND);
     createEAttribute(commandEClass, COMMAND__NAME);
-    createEReference(commandEClass, COMMAND__TIME);
+
+    lightRGBEClass = createEClass(LIGHT_RGB);
+    createEReference(lightRGBEClass, LIGHT_RGB__R);
+    createEReference(lightRGBEClass, LIGHT_RGB__G);
+    createEReference(lightRGBEClass, LIGHT_RGB__B);
+
+    buzzerOffEClass = createEClass(BUZZER_OFF);
+
+    buzzerOnEClass = createEClass(BUZZER_ON);
+    createEReference(buzzerOnEClass, BUZZER_ON__TIME);
+
+    deleteColorEClass = createEClass(DELETE_COLOR);
+    createEReference(deleteColorEClass, DELETE_COLOR__COLOR);
+
+    colorConfigurationEClass = createEClass(COLOR_CONFIGURATION);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__COLOR);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__HMIN);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__SMIN);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__VMIN);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__HMAX);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__SMAX);
+    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__VMAX);
+
+    cameraColorEClass = createEClass(CAMERA_COLOR);
+    createEReference(cameraColorEClass, CAMERA_COLOR__TIME);
+
+    readAllServosEClass = createEClass(READ_ALL_SERVOS);
+
+    readServoEClass = createEClass(READ_SERVO);
+    createEReference(readServoEClass, READ_SERVO__SERVO);
 
     rotateServoEClass = createEClass(ROTATE_SERVO);
     createEReference(rotateServoEClass, ROTATE_SERVO__SERVO);
     createEReference(rotateServoEClass, ROTATE_SERVO__ANGLE);
+    createEReference(rotateServoEClass, ROTATE_SERVO__TIME);
 
     rotateAllServosEClass = createEClass(ROTATE_ALL_SERVOS);
     createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE1);
@@ -711,6 +1355,7 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE4);
     createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE5);
     createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__ANGLE6);
+    createEReference(rotateAllServosEClass, ROTATE_ALL_SERVOS__TIME);
 
     resultEClass = createEClass(RESULT);
     createEAttribute(resultEClass, RESULT__NAME);
@@ -747,6 +1392,36 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     servoEClass = createEClass(SERVO);
     createEAttribute(servoEClass, SERVO__SERVO);
+
+    v_maxEClass = createEClass(VMAX);
+    createEAttribute(v_maxEClass, VMAX__VMAX);
+
+    s_maxEClass = createEClass(SMAX);
+    createEAttribute(s_maxEClass, SMAX__SMAX);
+
+    h_maxEClass = createEClass(HMAX);
+    createEAttribute(h_maxEClass, HMAX__HMAX);
+
+    v_minEClass = createEClass(VMIN);
+    createEAttribute(v_minEClass, VMIN__VMIN);
+
+    s_minEClass = createEClass(SMIN);
+    createEAttribute(s_minEClass, SMIN__SMIN);
+
+    h_minEClass = createEClass(HMIN);
+    createEAttribute(h_minEClass, HMIN__HMIN);
+
+    colorEClass = createEClass(COLOR);
+    createEAttribute(colorEClass, COLOR__COLOR);
+
+    bEClass = createEClass(B);
+    createEAttribute(bEClass, B__B);
+
+    gEClass = createEClass(G);
+    createEAttribute(gEClass, G__G);
+
+    rEClass = createEClass(R);
+    createEAttribute(rEClass, R__R);
   }
 
   /**
@@ -778,6 +1453,14 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    lightRGBEClass.getESuperTypes().add(this.getCommand());
+    buzzerOffEClass.getESuperTypes().add(this.getCommand());
+    buzzerOnEClass.getESuperTypes().add(this.getCommand());
+    deleteColorEClass.getESuperTypes().add(this.getCommand());
+    colorConfigurationEClass.getESuperTypes().add(this.getCommand());
+    cameraColorEClass.getESuperTypes().add(this.getCommand());
+    readAllServosEClass.getESuperTypes().add(this.getCommand());
+    readServoEClass.getESuperTypes().add(this.getCommand());
     rotateServoEClass.getESuperTypes().add(this.getCommand());
     rotateAllServosEClass.getESuperTypes().add(this.getCommand());
     isAtSingleEClass.getESuperTypes().add(this.getSolution());
@@ -790,11 +1473,41 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCommand_Name(), ecorePackage.getEString(), "name", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCommand_Time(), this.getTime(), null, "time", null, 0, -1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lightRGBEClass, lightRGB.class, "lightRGB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getlightRGB_R(), this.getR(), null, "r", null, 0, -1, lightRGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlightRGB_G(), this.getG(), null, "g", null, 0, -1, lightRGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlightRGB_B(), this.getB(), null, "b", null, 0, -1, lightRGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(buzzerOffEClass, buzzerOff.class, "buzzerOff", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(buzzerOnEClass, buzzerOn.class, "buzzerOn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getbuzzerOn_Time(), this.getTime(), null, "time", null, 0, -1, buzzerOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(deleteColorEClass, deleteColor.class, "deleteColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getdeleteColor_Color(), this.getColor(), null, "color", null, 0, -1, deleteColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorConfigurationEClass, colorConfiguration.class, "colorConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcolorConfiguration_Color(), this.getColor(), null, "color", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_H_min(), this.getH_min(), null, "h_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_S_min(), this.getS_min(), null, "s_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_V_min(), this.getV_min(), null, "v_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_H_max(), this.getH_max(), null, "h_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_S_max(), this.getS_max(), null, "s_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcolorConfiguration_V_max(), this.getV_max(), null, "v_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cameraColorEClass, cameraColor.class, "cameraColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcameraColor_Time(), this.getTime(), null, "time", null, 0, -1, cameraColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(readAllServosEClass, readAllServos.class, "readAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(readServoEClass, readServo.class, "readServo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getreadServo_Servo(), this.getServo(), null, "servo", null, 0, -1, readServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotateServoEClass, rotateServo.class, "rotateServo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getrotateServo_Servo(), this.getServo(), null, "servo", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrotateServo_Angle(), this.getAngle(), null, "angle", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateServo_Time(), this.getTime(), null, "time", null, 0, -1, rotateServo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rotateAllServosEClass, rotateAllServos.class, "rotateAllServos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getrotateAllServos_Angle1(), this.getAngle(), null, "angle1", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -803,6 +1516,7 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     initEReference(getrotateAllServos_Angle4(), this.getAngle(), null, "angle4", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrotateAllServos_Angle5(), this.getAngle(), null, "angle5", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrotateAllServos_Angle6(), this.getAngle(), null, "angle6", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getrotateAllServos_Time(), this.getTime(), null, "time", null, 0, -1, rotateAllServos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getResult_Name(), ecorePackage.getEString(), "name", null, 0, 1, Result.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -839,6 +1553,36 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
 
     initEClass(servoEClass, Servo.class, "Servo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getServo_Servo(), ecorePackage.getEInt(), "servo", null, 0, 1, Servo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(v_maxEClass, V_max.class, "V_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getV_max_V_max(), ecorePackage.getEInt(), "v_max", null, 0, 1, V_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(s_maxEClass, S_max.class, "S_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getS_max_S_max(), ecorePackage.getEInt(), "s_max", null, 0, 1, S_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(h_maxEClass, H_max.class, "H_max", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getH_max_H_max(), ecorePackage.getEInt(), "h_max", null, 0, 1, H_max.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(v_minEClass, V_min.class, "V_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getV_min_V_min(), ecorePackage.getEInt(), "v_min", null, 0, 1, V_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(s_minEClass, S_min.class, "S_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getS_min_S_min(), ecorePackage.getEInt(), "s_min", null, 0, 1, S_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(h_minEClass, H_min.class, "H_min", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getH_min_H_min(), ecorePackage.getEInt(), "h_min", null, 0, 1, H_min.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColor_Color(), ecorePackage.getEString(), "color", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(bEClass, org.xtext.operations.B.class, "B", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getB_B(), ecorePackage.getEInt(), "b", null, 0, 1, org.xtext.operations.B.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gEClass, org.xtext.operations.G.class, "G", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getG_G(), ecorePackage.getEInt(), "g", null, 0, 1, org.xtext.operations.G.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rEClass, org.xtext.operations.R.class, "R", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getR_R(), ecorePackage.getEInt(), "r", null, 0, 1, org.xtext.operations.R.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

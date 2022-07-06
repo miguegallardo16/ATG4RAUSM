@@ -69,13 +69,21 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cRotateServoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRotateAllServosParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cReadServoParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cReadAllServosParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cCameraColorParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cColorConfigurationParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cDeleteColorParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cBuzzerOnParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cBuzzerOffParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cLightRGBParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
 		//Command:
-		//    rotateServo | rotateAllServos
+		//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rotateServo | rotateAllServos
+		//rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//rotateServo
@@ -83,6 +91,475 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		
 		//rotateAllServos
 		public RuleCall getRotateAllServosParserRuleCall_1() { return cRotateAllServosParserRuleCall_1; }
+		
+		//readServo
+		public RuleCall getReadServoParserRuleCall_2() { return cReadServoParserRuleCall_2; }
+		
+		//readAllServos
+		public RuleCall getReadAllServosParserRuleCall_3() { return cReadAllServosParserRuleCall_3; }
+		
+		//cameraColor
+		public RuleCall getCameraColorParserRuleCall_4() { return cCameraColorParserRuleCall_4; }
+		
+		//colorConfiguration
+		public RuleCall getColorConfigurationParserRuleCall_5() { return cColorConfigurationParserRuleCall_5; }
+		
+		//deleteColor
+		public RuleCall getDeleteColorParserRuleCall_6() { return cDeleteColorParserRuleCall_6; }
+		
+		//buzzerOn
+		public RuleCall getBuzzerOnParserRuleCall_7() { return cBuzzerOnParserRuleCall_7; }
+		
+		//buzzerOff
+		public RuleCall getBuzzerOffParserRuleCall_8() { return cBuzzerOffParserRuleCall_8; }
+		
+		//lightRGB
+		public RuleCall getLightRGBParserRuleCall_9() { return cLightRGBParserRuleCall_9; }
+	}
+	public class LightRGBElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.lightRGB");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameLightRGBKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cRAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRRParserRuleCall_2_0 = (RuleCall)cRAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cGAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cGGParserRuleCall_4_0 = (RuleCall)cGAssignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBBParserRuleCall_6_0 = (RuleCall)cBAssignment_6.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//lightRGB:
+		//    name='lightRGB'
+		//    '('
+		//    (r+=R)
+		//    ','
+		//    (g+=G)
+		//    ','
+		//    (b+=B)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='lightRGB'
+		//'('
+		//(r+=R)
+		//','
+		//(g+=G)
+		//','
+		//(b+=B)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='lightRGB'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'lightRGB'
+		public Keyword getNameLightRGBKeyword_0_0() { return cNameLightRGBKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(r+=R)
+		public Assignment getRAssignment_2() { return cRAssignment_2; }
+		
+		//R
+		public RuleCall getRRParserRuleCall_2_0() { return cRRParserRuleCall_2_0; }
+		
+		//','
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		
+		//(g+=G)
+		public Assignment getGAssignment_4() { return cGAssignment_4; }
+		
+		//G
+		public RuleCall getGGParserRuleCall_4_0() { return cGGParserRuleCall_4_0; }
+		
+		//','
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+		
+		//(b+=B)
+		public Assignment getBAssignment_6() { return cBAssignment_6; }
+		
+		//B
+		public RuleCall getBBParserRuleCall_6_0() { return cBBParserRuleCall_6_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+	}
+	public class BuzzerOffElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.buzzerOff");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameBuzzerOffKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		////lightRGB(int r, int g, int b)
+		//buzzerOff:
+		//    name='buzzerOff'
+		//    '('
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='buzzerOff'
+		//'('
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='buzzerOff'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'buzzerOff'
+		public Keyword getNameBuzzerOffKeyword_0_0() { return cNameBuzzerOffKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+	}
+	public class BuzzerOnElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.buzzerOn");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameBuzzerOnKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//buzzerOn:
+		//    name='buzzerOn'
+		//    '('
+		//    (time+=Time)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='buzzerOn'
+		//'('
+		//(time+=Time)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='buzzerOn'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'buzzerOn'
+		public Keyword getNameBuzzerOnKeyword_0_0() { return cNameBuzzerOnKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(time+=Time)
+		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
+		
+		//Time
+		public RuleCall getTimeTimeParserRuleCall_2_0() { return cTimeTimeParserRuleCall_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+	}
+	public class DeleteColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.deleteColor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameDeleteColorKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cColorColorParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//deleteColor:
+		//    name='deleteColor'
+		//    '('
+		//    (color+=Color)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='deleteColor'
+		//'('
+		//(color+=Color)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='deleteColor'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'deleteColor'
+		public Keyword getNameDeleteColorKeyword_0_0() { return cNameDeleteColorKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(color+=Color)
+		public Assignment getColorAssignment_2() { return cColorAssignment_2; }
+		
+		//Color
+		public RuleCall getColorColorParserRuleCall_2_0() { return cColorColorParserRuleCall_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+	}
+	public class ColorConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.colorConfiguration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameColorConfigurationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cColorColorParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cH_minAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cH_minH_minParserRuleCall_4_0 = (RuleCall)cH_minAssignment_4.eContents().get(0);
+		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cS_minAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cS_minS_minParserRuleCall_6_0 = (RuleCall)cS_minAssignment_6.eContents().get(0);
+		private final Keyword cCommaKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cV_minAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cV_minV_minParserRuleCall_8_0 = (RuleCall)cV_minAssignment_8.eContents().get(0);
+		private final Keyword cCommaKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cH_maxAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cH_maxH_maxParserRuleCall_10_0 = (RuleCall)cH_maxAssignment_10.eContents().get(0);
+		private final Keyword cCommaKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cS_maxAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cS_maxS_maxParserRuleCall_12_0 = (RuleCall)cS_maxAssignment_12.eContents().get(0);
+		private final Keyword cCommaKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cV_maxAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cV_maxV_maxParserRuleCall_14_0 = (RuleCall)cV_maxAssignment_14.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		
+		//colorConfiguration:
+		//    name='colorConfiguration'
+		//    '('
+		//    (color+=Color)
+		//    ','
+		//    (h_min+=H_min)
+		//    ','
+		//    (s_min+=S_min)
+		//    ','
+		//    (v_min+=V_min)
+		//    ','
+		//    (h_max+=H_max)
+		//    ','
+		//    (s_max+=S_max)
+		//    ','
+		//    (v_max+=V_max)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='colorConfiguration'
+		//'('
+		//(color+=Color)
+		//','
+		//(h_min+=H_min)
+		//','
+		//(s_min+=S_min)
+		//','
+		//(v_min+=V_min)
+		//','
+		//(h_max+=H_max)
+		//','
+		//(s_max+=S_max)
+		//','
+		//(v_max+=V_max)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='colorConfiguration'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'colorConfiguration'
+		public Keyword getNameColorConfigurationKeyword_0_0() { return cNameColorConfigurationKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(color+=Color)
+		public Assignment getColorAssignment_2() { return cColorAssignment_2; }
+		
+		//Color
+		public RuleCall getColorColorParserRuleCall_2_0() { return cColorColorParserRuleCall_2_0; }
+		
+		//','
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+		
+		//(h_min+=H_min)
+		public Assignment getH_minAssignment_4() { return cH_minAssignment_4; }
+		
+		//H_min
+		public RuleCall getH_minH_minParserRuleCall_4_0() { return cH_minH_minParserRuleCall_4_0; }
+		
+		//','
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+		
+		//(s_min+=S_min)
+		public Assignment getS_minAssignment_6() { return cS_minAssignment_6; }
+		
+		//S_min
+		public RuleCall getS_minS_minParserRuleCall_6_0() { return cS_minS_minParserRuleCall_6_0; }
+		
+		//','
+		public Keyword getCommaKeyword_7() { return cCommaKeyword_7; }
+		
+		//(v_min+=V_min)
+		public Assignment getV_minAssignment_8() { return cV_minAssignment_8; }
+		
+		//V_min
+		public RuleCall getV_minV_minParserRuleCall_8_0() { return cV_minV_minParserRuleCall_8_0; }
+		
+		//','
+		public Keyword getCommaKeyword_9() { return cCommaKeyword_9; }
+		
+		//(h_max+=H_max)
+		public Assignment getH_maxAssignment_10() { return cH_maxAssignment_10; }
+		
+		//H_max
+		public RuleCall getH_maxH_maxParserRuleCall_10_0() { return cH_maxH_maxParserRuleCall_10_0; }
+		
+		//','
+		public Keyword getCommaKeyword_11() { return cCommaKeyword_11; }
+		
+		//(s_max+=S_max)
+		public Assignment getS_maxAssignment_12() { return cS_maxAssignment_12; }
+		
+		//S_max
+		public RuleCall getS_maxS_maxParserRuleCall_12_0() { return cS_maxS_maxParserRuleCall_12_0; }
+		
+		//','
+		public Keyword getCommaKeyword_13() { return cCommaKeyword_13; }
+		
+		//(v_max+=V_max)
+		public Assignment getV_maxAssignment_14() { return cV_maxAssignment_14; }
+		
+		//V_max
+		public RuleCall getV_maxV_maxParserRuleCall_14_0() { return cV_maxV_maxParserRuleCall_14_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_15() { return cRightParenthesisKeyword_15; }
+	}
+	public class CameraColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.cameraColor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameCameraColorKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTimeTimeParserRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//cameraColor:
+		//    name='cameraColor'
+		//    '('
+		//    (time+=Time)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='cameraColor'
+		//'('
+		//(time+=Time)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='cameraColor'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'cameraColor'
+		public Keyword getNameCameraColorKeyword_0_0() { return cNameCameraColorKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(time+=Time)
+		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
+		
+		//Time
+		public RuleCall getTimeTimeParserRuleCall_2_0() { return cTimeTimeParserRuleCall_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+	}
+	public class ReadAllServosElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.readAllServos");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameReadAllServosKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//readAllServos:
+		//    name='readAllServos'
+		//    '('
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='readAllServos'
+		//'('
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='readAllServos'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'readAllServos'
+		public Keyword getNameReadAllServosKeyword_0_0() { return cNameReadAllServosKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+	}
+	public class ReadServoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.readServo");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameReadServoKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cServoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cServoServoParserRuleCall_2_0 = (RuleCall)cServoAssignment_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//readServo:
+		//    name='readServo'
+		//    '('
+		//    (servo+=Servo)
+		//    ')'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name='readServo'
+		//'('
+		//(servo+=Servo)
+		//')'
+		public Group getGroup() { return cGroup; }
+		
+		//name='readServo'
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//'readServo'
+		public Keyword getNameReadServoKeyword_0_0() { return cNameReadServoKeyword_0_0; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		
+		//(servo+=Servo)
+		public Assignment getServoAssignment_2() { return cServoAssignment_2; }
+		
+		//Servo
+		public RuleCall getServoServoParserRuleCall_2_0() { return cServoServoParserRuleCall_2_0; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 	public class RotateServoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.rotateServo");
@@ -676,10 +1153,178 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//INT
 		public RuleCall getServoINTTerminalRuleCall_0() { return cServoINTTerminalRuleCall_0; }
 	}
+	public class V_maxElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.V_max");
+		private final Assignment cV_maxAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cV_maxINTTerminalRuleCall_0 = (RuleCall)cV_maxAssignment.eContents().get(0);
+		
+		//V_max:
+		//    v_max=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//v_max=INT
+		public Assignment getV_maxAssignment() { return cV_maxAssignment; }
+		
+		//INT
+		public RuleCall getV_maxINTTerminalRuleCall_0() { return cV_maxINTTerminalRuleCall_0; }
+	}
+	public class S_maxElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.S_max");
+		private final Assignment cS_maxAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cS_maxINTTerminalRuleCall_0 = (RuleCall)cS_maxAssignment.eContents().get(0);
+		
+		//S_max:
+		//    s_max=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//s_max=INT
+		public Assignment getS_maxAssignment() { return cS_maxAssignment; }
+		
+		//INT
+		public RuleCall getS_maxINTTerminalRuleCall_0() { return cS_maxINTTerminalRuleCall_0; }
+	}
+	public class H_maxElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.H_max");
+		private final Assignment cH_maxAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cH_maxINTTerminalRuleCall_0 = (RuleCall)cH_maxAssignment.eContents().get(0);
+		
+		//H_max:
+		//    h_max=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//h_max=INT
+		public Assignment getH_maxAssignment() { return cH_maxAssignment; }
+		
+		//INT
+		public RuleCall getH_maxINTTerminalRuleCall_0() { return cH_maxINTTerminalRuleCall_0; }
+	}
+	public class V_minElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.V_min");
+		private final Assignment cV_minAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cV_minINTTerminalRuleCall_0 = (RuleCall)cV_minAssignment.eContents().get(0);
+		
+		//V_min:
+		//    v_min=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//v_min=INT
+		public Assignment getV_minAssignment() { return cV_minAssignment; }
+		
+		//INT
+		public RuleCall getV_minINTTerminalRuleCall_0() { return cV_minINTTerminalRuleCall_0; }
+	}
+	public class S_minElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.S_min");
+		private final Assignment cS_minAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cS_minINTTerminalRuleCall_0 = (RuleCall)cS_minAssignment.eContents().get(0);
+		
+		//S_min:
+		//    s_min=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//s_min=INT
+		public Assignment getS_minAssignment() { return cS_minAssignment; }
+		
+		//INT
+		public RuleCall getS_minINTTerminalRuleCall_0() { return cS_minINTTerminalRuleCall_0; }
+	}
+	public class H_minElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.H_min");
+		private final Assignment cH_minAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cH_minINTTerminalRuleCall_0 = (RuleCall)cH_minAssignment.eContents().get(0);
+		
+		//H_min:
+		//    h_min=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//h_min=INT
+		public Assignment getH_minAssignment() { return cH_minAssignment; }
+		
+		//INT
+		public RuleCall getH_minINTTerminalRuleCall_0() { return cH_minINTTerminalRuleCall_0; }
+	}
+	public class ColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.Color");
+		private final Assignment cColorAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cColorSTRINGTerminalRuleCall_0 = (RuleCall)cColorAssignment.eContents().get(0);
+		
+		//Color:
+		//    color=STRING
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//color=STRING
+		public Assignment getColorAssignment() { return cColorAssignment; }
+		
+		//STRING
+		public RuleCall getColorSTRINGTerminalRuleCall_0() { return cColorSTRINGTerminalRuleCall_0; }
+	}
+	public class BElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.B");
+		private final Assignment cBAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cBINTTerminalRuleCall_0 = (RuleCall)cBAssignment.eContents().get(0);
+		
+		//B:
+		//    b=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//b=INT
+		public Assignment getBAssignment() { return cBAssignment; }
+		
+		//INT
+		public RuleCall getBINTTerminalRuleCall_0() { return cBINTTerminalRuleCall_0; }
+	}
+	public class GElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.G");
+		private final Assignment cGAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cGINTTerminalRuleCall_0 = (RuleCall)cGAssignment.eContents().get(0);
+		
+		//G:
+		//    g=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//g=INT
+		public Assignment getGAssignment() { return cGAssignment; }
+		
+		//INT
+		public RuleCall getGINTTerminalRuleCall_0() { return cGINTTerminalRuleCall_0; }
+	}
+	public class RElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.R");
+		private final Assignment cRAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cRINTTerminalRuleCall_0 = (RuleCall)cRAssignment.eContents().get(0);
+		
+		//R:
+		//    r=INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//r=INT
+		public Assignment getRAssignment() { return cRAssignment; }
+		
+		//INT
+		public RuleCall getRINTTerminalRuleCall_0() { return cRINTTerminalRuleCall_0; }
+	}
 	
 	
 	private final InitialElements pInitial;
 	private final CommandElements pCommand;
+	private final LightRGBElements pLightRGB;
+	private final BuzzerOffElements pBuzzerOff;
+	private final BuzzerOnElements pBuzzerOn;
+	private final DeleteColorElements pDeleteColor;
+	private final ColorConfigurationElements pColorConfiguration;
+	private final CameraColorElements pCameraColor;
+	private final ReadAllServosElements pReadAllServos;
+	private final ReadServoElements pReadServo;
 	private final RotateServoElements pRotateServo;
 	private final RotateAllServosElements pRotateAllServos;
 	private final ResultElements pResult;
@@ -691,6 +1336,16 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final AngleElements pAngle;
 	private final TimeElements pTime;
 	private final ServoElements pServo;
+	private final V_maxElements pV_max;
+	private final S_maxElements pS_max;
+	private final H_maxElements pH_max;
+	private final V_minElements pV_min;
+	private final S_minElements pS_min;
+	private final H_minElements pH_min;
+	private final ColorElements pColor;
+	private final BElements pB;
+	private final GElements pG;
+	private final RElements pR;
 	
 	private final Grammar grammar;
 	
@@ -703,6 +1358,14 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.gaTerminals = gaTerminals;
 		this.pInitial = new InitialElements();
 		this.pCommand = new CommandElements();
+		this.pLightRGB = new LightRGBElements();
+		this.pBuzzerOff = new BuzzerOffElements();
+		this.pBuzzerOn = new BuzzerOnElements();
+		this.pDeleteColor = new DeleteColorElements();
+		this.pColorConfiguration = new ColorConfigurationElements();
+		this.pCameraColor = new CameraColorElements();
+		this.pReadAllServos = new ReadAllServosElements();
+		this.pReadServo = new ReadServoElements();
 		this.pRotateServo = new RotateServoElements();
 		this.pRotateAllServos = new RotateAllServosElements();
 		this.pResult = new ResultElements();
@@ -714,6 +1377,16 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pAngle = new AngleElements();
 		this.pTime = new TimeElements();
 		this.pServo = new ServoElements();
+		this.pV_max = new V_maxElements();
+		this.pS_max = new S_maxElements();
+		this.pH_max = new H_maxElements();
+		this.pV_min = new V_minElements();
+		this.pS_min = new S_minElements();
+		this.pH_min = new H_minElements();
+		this.pColor = new ColorElements();
+		this.pB = new BElements();
+		this.pG = new GElements();
+		this.pR = new RElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -758,7 +1431,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Command:
-	//    rotateServo | rotateAllServos
+	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
 	//;
 	public CommandElements getCommandAccess() {
 		return pCommand;
@@ -766,6 +1439,133 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public ParserRule getCommandRule() {
 		return getCommandAccess().getRule();
+	}
+	
+	//lightRGB:
+	//    name='lightRGB'
+	//    '('
+	//    (r+=R)
+	//    ','
+	//    (g+=G)
+	//    ','
+	//    (b+=B)
+	//    ')'
+	//;
+	public LightRGBElements getLightRGBAccess() {
+		return pLightRGB;
+	}
+	
+	public ParserRule getLightRGBRule() {
+		return getLightRGBAccess().getRule();
+	}
+	
+	////lightRGB(int r, int g, int b)
+	//buzzerOff:
+	//    name='buzzerOff'
+	//    '('
+	//    ')'
+	//;
+	public BuzzerOffElements getBuzzerOffAccess() {
+		return pBuzzerOff;
+	}
+	
+	public ParserRule getBuzzerOffRule() {
+		return getBuzzerOffAccess().getRule();
+	}
+	
+	//buzzerOn:
+	//    name='buzzerOn'
+	//    '('
+	//    (time+=Time)
+	//    ')'
+	//;
+	public BuzzerOnElements getBuzzerOnAccess() {
+		return pBuzzerOn;
+	}
+	
+	public ParserRule getBuzzerOnRule() {
+		return getBuzzerOnAccess().getRule();
+	}
+	
+	//deleteColor:
+	//    name='deleteColor'
+	//    '('
+	//    (color+=Color)
+	//    ')'
+	//;
+	public DeleteColorElements getDeleteColorAccess() {
+		return pDeleteColor;
+	}
+	
+	public ParserRule getDeleteColorRule() {
+		return getDeleteColorAccess().getRule();
+	}
+	
+	//colorConfiguration:
+	//    name='colorConfiguration'
+	//    '('
+	//    (color+=Color)
+	//    ','
+	//    (h_min+=H_min)
+	//    ','
+	//    (s_min+=S_min)
+	//    ','
+	//    (v_min+=V_min)
+	//    ','
+	//    (h_max+=H_max)
+	//    ','
+	//    (s_max+=S_max)
+	//    ','
+	//    (v_max+=V_max)
+	//    ')'
+	//;
+	public ColorConfigurationElements getColorConfigurationAccess() {
+		return pColorConfiguration;
+	}
+	
+	public ParserRule getColorConfigurationRule() {
+		return getColorConfigurationAccess().getRule();
+	}
+	
+	//cameraColor:
+	//    name='cameraColor'
+	//    '('
+	//    (time+=Time)
+	//    ')'
+	//;
+	public CameraColorElements getCameraColorAccess() {
+		return pCameraColor;
+	}
+	
+	public ParserRule getCameraColorRule() {
+		return getCameraColorAccess().getRule();
+	}
+	
+	//readAllServos:
+	//    name='readAllServos'
+	//    '('
+	//    ')'
+	//;
+	public ReadAllServosElements getReadAllServosAccess() {
+		return pReadAllServos;
+	}
+	
+	public ParserRule getReadAllServosRule() {
+		return getReadAllServosAccess().getRule();
+	}
+	
+	//readServo:
+	//    name='readServo'
+	//    '('
+	//    (servo+=Servo)
+	//    ')'
+	//;
+	public ReadServoElements getReadServoAccess() {
+		return pReadServo;
+	}
+	
+	public ParserRule getReadServoRule() {
+		return getReadServoAccess().getRule();
 	}
 	
 	//rotateServo:
@@ -937,6 +1737,116 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public ParserRule getServoRule() {
 		return getServoAccess().getRule();
+	}
+	
+	//V_max:
+	//    v_max=INT
+	//;
+	public V_maxElements getV_maxAccess() {
+		return pV_max;
+	}
+	
+	public ParserRule getV_maxRule() {
+		return getV_maxAccess().getRule();
+	}
+	
+	//S_max:
+	//    s_max=INT
+	//;
+	public S_maxElements getS_maxAccess() {
+		return pS_max;
+	}
+	
+	public ParserRule getS_maxRule() {
+		return getS_maxAccess().getRule();
+	}
+	
+	//H_max:
+	//    h_max=INT
+	//;
+	public H_maxElements getH_maxAccess() {
+		return pH_max;
+	}
+	
+	public ParserRule getH_maxRule() {
+		return getH_maxAccess().getRule();
+	}
+	
+	//V_min:
+	//    v_min=INT
+	//;
+	public V_minElements getV_minAccess() {
+		return pV_min;
+	}
+	
+	public ParserRule getV_minRule() {
+		return getV_minAccess().getRule();
+	}
+	
+	//S_min:
+	//    s_min=INT
+	//;
+	public S_minElements getS_minAccess() {
+		return pS_min;
+	}
+	
+	public ParserRule getS_minRule() {
+		return getS_minAccess().getRule();
+	}
+	
+	//H_min:
+	//    h_min=INT
+	//;
+	public H_minElements getH_minAccess() {
+		return pH_min;
+	}
+	
+	public ParserRule getH_minRule() {
+		return getH_minAccess().getRule();
+	}
+	
+	//Color:
+	//    color=STRING
+	//;
+	public ColorElements getColorAccess() {
+		return pColor;
+	}
+	
+	public ParserRule getColorRule() {
+		return getColorAccess().getRule();
+	}
+	
+	//B:
+	//    b=INT
+	//;
+	public BElements getBAccess() {
+		return pB;
+	}
+	
+	public ParserRule getBRule() {
+		return getBAccess().getRule();
+	}
+	
+	//G:
+	//    g=INT
+	//;
+	public GElements getGAccess() {
+		return pG;
+	}
+	
+	public ParserRule getGRule() {
+		return getGAccess().getRule();
+	}
+	
+	//R:
+	//    r=INT
+	//;
+	public RElements getRAccess() {
+		return pR;
+	}
+	
+	public ParserRule getRRule() {
+		return getRAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

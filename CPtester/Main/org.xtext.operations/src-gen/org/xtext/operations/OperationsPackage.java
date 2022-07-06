@@ -114,22 +114,363 @@ public interface OperationsPackage extends EPackage
   int COMMAND__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Time</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMMAND__TIME = 1;
-
-  /**
    * The number of structural features of the '<em>Command</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMAND_FEATURE_COUNT = 2;
+  int COMMAND_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.lightRGBImpl <em>light RGB</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.lightRGBImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGB()
+   * @generated
+   */
+  int LIGHT_RGB = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGHT_RGB__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>R</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGHT_RGB__R = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>G</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGHT_RGB__G = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>B</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGHT_RGB__B = COMMAND_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>light RGB</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGHT_RGB_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOffImpl <em>buzzer Off</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.buzzerOffImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOff()
+   * @generated
+   */
+  int BUZZER_OFF = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUZZER_OFF__NAME = COMMAND__NAME;
+
+  /**
+   * The number of structural features of the '<em>buzzer Off</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUZZER_OFF_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.buzzerOnImpl <em>buzzer On</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.buzzerOnImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOn()
+   * @generated
+   */
+  int BUZZER_ON = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUZZER_ON__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUZZER_ON__TIME = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>buzzer On</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUZZER_ON_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.deleteColorImpl <em>delete Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.deleteColorImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getdeleteColor()
+   * @generated
+   */
+  int DELETE_COLOR = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_COLOR__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_COLOR__COLOR = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>delete Color</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELETE_COLOR_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.colorConfigurationImpl <em>color Configuration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.colorConfigurationImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getcolorConfiguration()
+   * @generated
+   */
+  int COLOR_CONFIGURATION = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__COLOR = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Hmin</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__HMIN = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Smin</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__SMIN = COMMAND_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Vmin</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__VMIN = COMMAND_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Hmax</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__HMAX = COMMAND_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Smax</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__SMAX = COMMAND_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Vmax</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION__VMAX = COMMAND_FEATURE_COUNT + 6;
+
+  /**
+   * The number of structural features of the '<em>color Configuration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_CONFIGURATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.cameraColorImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColor()
+   * @generated
+   */
+  int CAMERA_COLOR = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAMERA_COLOR__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAMERA_COLOR__TIME = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>camera Color</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAMERA_COLOR_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.readAllServosImpl <em>read All Servos</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.readAllServosImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServos()
+   * @generated
+   */
+  int READ_ALL_SERVOS = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_ALL_SERVOS__NAME = COMMAND__NAME;
+
+  /**
+   * The number of structural features of the '<em>read All Servos</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.readServoImpl <em>read Servo</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.readServoImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServo()
+   * @generated
+   */
+  int READ_SERVO = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_SERVO__NAME = COMMAND__NAME;
+
+  /**
+   * The feature id for the '<em><b>Servo</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_SERVO__SERVO = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>read Servo</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int READ_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.rotateServoImpl <em>rotate Servo</em>}' class.
@@ -139,7 +480,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServo()
    * @generated
    */
-  int ROTATE_SERVO = 2;
+  int ROTATE_SERVO = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -149,15 +490,6 @@ public interface OperationsPackage extends EPackage
    * @ordered
    */
   int ROTATE_SERVO__NAME = COMMAND__NAME;
-
-  /**
-   * The feature id for the '<em><b>Time</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATE_SERVO__TIME = COMMAND__TIME;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' containment reference list.
@@ -178,13 +510,22 @@ public interface OperationsPackage extends EPackage
   int ROTATE_SERVO__ANGLE = COMMAND_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_SERVO__TIME = COMMAND_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>rotate Servo</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROTATE_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+  int ROTATE_SERVO_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
@@ -194,7 +535,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServos()
    * @generated
    */
-  int ROTATE_ALL_SERVOS = 3;
+  int ROTATE_ALL_SERVOS = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -204,15 +545,6 @@ public interface OperationsPackage extends EPackage
    * @ordered
    */
   int ROTATE_ALL_SERVOS__NAME = COMMAND__NAME;
-
-  /**
-   * The feature id for the '<em><b>Time</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ROTATE_ALL_SERVOS__TIME = COMMAND__TIME;
 
   /**
    * The feature id for the '<em><b>Angle1</b></em>' containment reference list.
@@ -269,13 +601,22 @@ public interface OperationsPackage extends EPackage
   int ROTATE_ALL_SERVOS__ANGLE6 = COMMAND_FEATURE_COUNT + 5;
 
   /**
+   * The feature id for the '<em><b>Time</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_ALL_SERVOS__TIME = COMMAND_FEATURE_COUNT + 6;
+
+  /**
    * The number of structural features of the '<em>rotate All Servos</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ROTATE_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 6;
+  int ROTATE_ALL_SERVOS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.ResultImpl <em>Result</em>}' class.
@@ -285,7 +626,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getResult()
    * @generated
    */
-  int RESULT = 4;
+  int RESULT = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -322,7 +663,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getConditions()
    * @generated
    */
-  int CONDITIONS = 5;
+  int CONDITIONS = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -359,7 +700,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getSolution()
    * @generated
    */
-  int SOLUTION = 6;
+  int SOLUTION = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -396,7 +737,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingle()
    * @generated
    */
-  int IS_AT_SINGLE = 7;
+  int IS_AT_SINGLE = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -451,7 +792,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getisAt()
    * @generated
    */
-  int IS_AT = 8;
+  int IS_AT = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -542,7 +883,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getAngle_res()
    * @generated
    */
-  int ANGLE_RES = 9;
+  int ANGLE_RES = 17;
 
   /**
    * The feature id for the '<em><b>Angle res</b></em>' attribute.
@@ -570,7 +911,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getAngle()
    * @generated
    */
-  int ANGLE = 10;
+  int ANGLE = 18;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -598,7 +939,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getTime()
    * @generated
    */
-  int TIME = 11;
+  int TIME = 19;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -626,7 +967,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getServo()
    * @generated
    */
-  int SERVO = 12;
+  int SERVO = 20;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' attribute.
@@ -645,6 +986,286 @@ public interface OperationsPackage extends EPackage
    * @ordered
    */
   int SERVO_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.V_maxImpl <em>Vmax</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.V_maxImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getV_max()
+   * @generated
+   */
+  int VMAX = 21;
+
+  /**
+   * The feature id for the '<em><b>Vmax</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VMAX__VMAX = 0;
+
+  /**
+   * The number of structural features of the '<em>Vmax</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VMAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.S_maxImpl <em>Smax</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.S_maxImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getS_max()
+   * @generated
+   */
+  int SMAX = 22;
+
+  /**
+   * The feature id for the '<em><b>Smax</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SMAX__SMAX = 0;
+
+  /**
+   * The number of structural features of the '<em>Smax</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SMAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.H_maxImpl <em>Hmax</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.H_maxImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getH_max()
+   * @generated
+   */
+  int HMAX = 23;
+
+  /**
+   * The feature id for the '<em><b>Hmax</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HMAX__HMAX = 0;
+
+  /**
+   * The number of structural features of the '<em>Hmax</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HMAX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.V_minImpl <em>Vmin</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.V_minImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getV_min()
+   * @generated
+   */
+  int VMIN = 24;
+
+  /**
+   * The feature id for the '<em><b>Vmin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VMIN__VMIN = 0;
+
+  /**
+   * The number of structural features of the '<em>Vmin</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VMIN_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.S_minImpl <em>Smin</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.S_minImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getS_min()
+   * @generated
+   */
+  int SMIN = 25;
+
+  /**
+   * The feature id for the '<em><b>Smin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SMIN__SMIN = 0;
+
+  /**
+   * The number of structural features of the '<em>Smin</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SMIN_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.H_minImpl <em>Hmin</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.H_minImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getH_min()
+   * @generated
+   */
+  int HMIN = 26;
+
+  /**
+   * The feature id for the '<em><b>Hmin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HMIN__HMIN = 0;
+
+  /**
+   * The number of structural features of the '<em>Hmin</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HMIN_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.ColorImpl <em>Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.ColorImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getColor()
+   * @generated
+   */
+  int COLOR = 27;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR__COLOR = 0;
+
+  /**
+   * The number of structural features of the '<em>Color</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.BImpl <em>B</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.BImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getB()
+   * @generated
+   */
+  int B = 28;
+
+  /**
+   * The feature id for the '<em><b>B</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int B__B = 0;
+
+  /**
+   * The number of structural features of the '<em>B</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int B_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.GImpl <em>G</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.GImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getG()
+   * @generated
+   */
+  int G = 29;
+
+  /**
+   * The feature id for the '<em><b>G</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int G__G = 0;
+
+  /**
+   * The number of structural features of the '<em>G</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int G_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.operations.impl.RImpl <em>R</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.operations.impl.RImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getR()
+   * @generated
+   */
+  int R = 30;
+
+  /**
+   * The feature id for the '<em><b>R</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int R__R = 0;
+
+  /**
+   * The number of structural features of the '<em>R</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int R_FEATURE_COUNT = 1;
 
 
   /**
@@ -701,15 +1322,238 @@ public interface OperationsPackage extends EPackage
   EAttribute getCommand_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.Command#getTime <em>Time</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.lightRGB <em>light RGB</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>light RGB</em>'.
+   * @see org.xtext.operations.lightRGB
+   * @generated
+   */
+  EClass getlightRGB();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getR <em>R</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>R</em>'.
+   * @see org.xtext.operations.lightRGB#getR()
+   * @see #getlightRGB()
+   * @generated
+   */
+  EReference getlightRGB_R();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getG <em>G</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>G</em>'.
+   * @see org.xtext.operations.lightRGB#getG()
+   * @see #getlightRGB()
+   * @generated
+   */
+  EReference getlightRGB_G();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.lightRGB#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>B</em>'.
+   * @see org.xtext.operations.lightRGB#getB()
+   * @see #getlightRGB()
+   * @generated
+   */
+  EReference getlightRGB_B();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.buzzerOff <em>buzzer Off</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>buzzer Off</em>'.
+   * @see org.xtext.operations.buzzerOff
+   * @generated
+   */
+  EClass getbuzzerOff();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.buzzerOn <em>buzzer On</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>buzzer On</em>'.
+   * @see org.xtext.operations.buzzerOn
+   * @generated
+   */
+  EClass getbuzzerOn();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.buzzerOn#getTime <em>Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Time</em>'.
-   * @see org.xtext.operations.Command#getTime()
-   * @see #getCommand()
+   * @see org.xtext.operations.buzzerOn#getTime()
+   * @see #getbuzzerOn()
    * @generated
    */
-  EReference getCommand_Time();
+  EReference getbuzzerOn_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.deleteColor <em>delete Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>delete Color</em>'.
+   * @see org.xtext.operations.deleteColor
+   * @generated
+   */
+  EClass getdeleteColor();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.deleteColor#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Color</em>'.
+   * @see org.xtext.operations.deleteColor#getColor()
+   * @see #getdeleteColor()
+   * @generated
+   */
+  EReference getdeleteColor_Color();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.colorConfiguration <em>color Configuration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>color Configuration</em>'.
+   * @see org.xtext.operations.colorConfiguration
+   * @generated
+   */
+  EClass getcolorConfiguration();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Color</em>'.
+   * @see org.xtext.operations.colorConfiguration#getColor()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_Color();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getH_min <em>Hmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Hmin</em>'.
+   * @see org.xtext.operations.colorConfiguration#getH_min()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_H_min();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getS_min <em>Smin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Smin</em>'.
+   * @see org.xtext.operations.colorConfiguration#getS_min()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_S_min();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getV_min <em>Vmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Vmin</em>'.
+   * @see org.xtext.operations.colorConfiguration#getV_min()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_V_min();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getH_max <em>Hmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Hmax</em>'.
+   * @see org.xtext.operations.colorConfiguration#getH_max()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_H_max();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getS_max <em>Smax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Smax</em>'.
+   * @see org.xtext.operations.colorConfiguration#getS_max()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_S_max();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getV_max <em>Vmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Vmax</em>'.
+   * @see org.xtext.operations.colorConfiguration#getV_max()
+   * @see #getcolorConfiguration()
+   * @generated
+   */
+  EReference getcolorConfiguration_V_max();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.cameraColor <em>camera Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>camera Color</em>'.
+   * @see org.xtext.operations.cameraColor
+   * @generated
+   */
+  EClass getcameraColor();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.cameraColor#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.operations.cameraColor#getTime()
+   * @see #getcameraColor()
+   * @generated
+   */
+  EReference getcameraColor_Time();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.readAllServos <em>read All Servos</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>read All Servos</em>'.
+   * @see org.xtext.operations.readAllServos
+   * @generated
+   */
+  EClass getreadAllServos();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.readServo <em>read Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>read Servo</em>'.
+   * @see org.xtext.operations.readServo
+   * @generated
+   */
+  EClass getreadServo();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.readServo#getServo <em>Servo</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Servo</em>'.
+   * @see org.xtext.operations.readServo#getServo()
+   * @see #getreadServo()
+   * @generated
+   */
+  EReference getreadServo_Servo();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.rotateServo <em>rotate Servo</em>}'.
@@ -742,6 +1586,17 @@ public interface OperationsPackage extends EPackage
    * @generated
    */
   EReference getrotateServo_Angle();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateServo#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.operations.rotateServo#getTime()
+   * @see #getrotateServo()
+   * @generated
+   */
+  EReference getrotateServo_Time();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.rotateAllServos <em>rotate All Servos</em>}'.
@@ -818,6 +1673,17 @@ public interface OperationsPackage extends EPackage
    * @generated
    */
   EReference getrotateAllServos_Angle6();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.rotateAllServos#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Time</em>'.
+   * @see org.xtext.operations.rotateAllServos#getTime()
+   * @see #getrotateAllServos()
+   * @generated
+   */
+  EReference getrotateAllServos_Time();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.Result <em>Result</em>}'.
@@ -1108,6 +1974,216 @@ public interface OperationsPackage extends EPackage
   EAttribute getServo_Servo();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.operations.V_max <em>Vmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vmax</em>'.
+   * @see org.xtext.operations.V_max
+   * @generated
+   */
+  EClass getV_max();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.V_max#getV_max <em>Vmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Vmax</em>'.
+   * @see org.xtext.operations.V_max#getV_max()
+   * @see #getV_max()
+   * @generated
+   */
+  EAttribute getV_max_V_max();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.S_max <em>Smax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Smax</em>'.
+   * @see org.xtext.operations.S_max
+   * @generated
+   */
+  EClass getS_max();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.S_max#getS_max <em>Smax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Smax</em>'.
+   * @see org.xtext.operations.S_max#getS_max()
+   * @see #getS_max()
+   * @generated
+   */
+  EAttribute getS_max_S_max();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.H_max <em>Hmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Hmax</em>'.
+   * @see org.xtext.operations.H_max
+   * @generated
+   */
+  EClass getH_max();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.H_max#getH_max <em>Hmax</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hmax</em>'.
+   * @see org.xtext.operations.H_max#getH_max()
+   * @see #getH_max()
+   * @generated
+   */
+  EAttribute getH_max_H_max();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.V_min <em>Vmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vmin</em>'.
+   * @see org.xtext.operations.V_min
+   * @generated
+   */
+  EClass getV_min();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.V_min#getV_min <em>Vmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Vmin</em>'.
+   * @see org.xtext.operations.V_min#getV_min()
+   * @see #getV_min()
+   * @generated
+   */
+  EAttribute getV_min_V_min();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.S_min <em>Smin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Smin</em>'.
+   * @see org.xtext.operations.S_min
+   * @generated
+   */
+  EClass getS_min();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.S_min#getS_min <em>Smin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Smin</em>'.
+   * @see org.xtext.operations.S_min#getS_min()
+   * @see #getS_min()
+   * @generated
+   */
+  EAttribute getS_min_S_min();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.H_min <em>Hmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Hmin</em>'.
+   * @see org.xtext.operations.H_min
+   * @generated
+   */
+  EClass getH_min();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.H_min#getH_min <em>Hmin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hmin</em>'.
+   * @see org.xtext.operations.H_min#getH_min()
+   * @see #getH_min()
+   * @generated
+   */
+  EAttribute getH_min_H_min();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.Color <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Color</em>'.
+   * @see org.xtext.operations.Color
+   * @generated
+   */
+  EClass getColor();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.Color#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Color</em>'.
+   * @see org.xtext.operations.Color#getColor()
+   * @see #getColor()
+   * @generated
+   */
+  EAttribute getColor_Color();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.B <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>B</em>'.
+   * @see org.xtext.operations.B
+   * @generated
+   */
+  EClass getB();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.B#getB <em>B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>B</em>'.
+   * @see org.xtext.operations.B#getB()
+   * @see #getB()
+   * @generated
+   */
+  EAttribute getB_B();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.G <em>G</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>G</em>'.
+   * @see org.xtext.operations.G
+   * @generated
+   */
+  EClass getG();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.G#getG <em>G</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>G</em>'.
+   * @see org.xtext.operations.G#getG()
+   * @see #getG()
+   * @generated
+   */
+  EAttribute getG_G();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.operations.R <em>R</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>R</em>'.
+   * @see org.xtext.operations.R
+   * @generated
+   */
+  EClass getR();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.operations.R#getR <em>R</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>R</em>'.
+   * @see org.xtext.operations.R#getR()
+   * @see #getR()
+   * @generated
+   */
+  EAttribute getR_R();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1175,12 +2251,196 @@ public interface OperationsPackage extends EPackage
     EAttribute COMMAND__NAME = eINSTANCE.getCommand_Name();
 
     /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.lightRGBImpl <em>light RGB</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.lightRGBImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getlightRGB()
+     * @generated
+     */
+    EClass LIGHT_RGB = eINSTANCE.getlightRGB();
+
+    /**
+     * The meta object literal for the '<em><b>R</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIGHT_RGB__R = eINSTANCE.getlightRGB_R();
+
+    /**
+     * The meta object literal for the '<em><b>G</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIGHT_RGB__G = eINSTANCE.getlightRGB_G();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIGHT_RGB__B = eINSTANCE.getlightRGB_B();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOffImpl <em>buzzer Off</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.buzzerOffImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOff()
+     * @generated
+     */
+    EClass BUZZER_OFF = eINSTANCE.getbuzzerOff();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.buzzerOnImpl <em>buzzer On</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.buzzerOnImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getbuzzerOn()
+     * @generated
+     */
+    EClass BUZZER_ON = eINSTANCE.getbuzzerOn();
+
+    /**
      * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMMAND__TIME = eINSTANCE.getCommand_Time();
+    EReference BUZZER_ON__TIME = eINSTANCE.getbuzzerOn_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.deleteColorImpl <em>delete Color</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.deleteColorImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getdeleteColor()
+     * @generated
+     */
+    EClass DELETE_COLOR = eINSTANCE.getdeleteColor();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DELETE_COLOR__COLOR = eINSTANCE.getdeleteColor_Color();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.colorConfigurationImpl <em>color Configuration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.colorConfigurationImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getcolorConfiguration()
+     * @generated
+     */
+    EClass COLOR_CONFIGURATION = eINSTANCE.getcolorConfiguration();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__COLOR = eINSTANCE.getcolorConfiguration_Color();
+
+    /**
+     * The meta object literal for the '<em><b>Hmin</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__HMIN = eINSTANCE.getcolorConfiguration_H_min();
+
+    /**
+     * The meta object literal for the '<em><b>Smin</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__SMIN = eINSTANCE.getcolorConfiguration_S_min();
+
+    /**
+     * The meta object literal for the '<em><b>Vmin</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__VMIN = eINSTANCE.getcolorConfiguration_V_min();
+
+    /**
+     * The meta object literal for the '<em><b>Hmax</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__HMAX = eINSTANCE.getcolorConfiguration_H_max();
+
+    /**
+     * The meta object literal for the '<em><b>Smax</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__SMAX = eINSTANCE.getcolorConfiguration_S_max();
+
+    /**
+     * The meta object literal for the '<em><b>Vmax</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_CONFIGURATION__VMAX = eINSTANCE.getcolorConfiguration_V_max();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.cameraColorImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColor()
+     * @generated
+     */
+    EClass CAMERA_COLOR = eINSTANCE.getcameraColor();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CAMERA_COLOR__TIME = eINSTANCE.getcameraColor_Time();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.readAllServosImpl <em>read All Servos</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.readAllServosImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServos()
+     * @generated
+     */
+    EClass READ_ALL_SERVOS = eINSTANCE.getreadAllServos();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.readServoImpl <em>read Servo</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.readServoImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServo()
+     * @generated
+     */
+    EClass READ_SERVO = eINSTANCE.getreadServo();
+
+    /**
+     * The meta object literal for the '<em><b>Servo</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference READ_SERVO__SERVO = eINSTANCE.getreadServo_Servo();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.rotateServoImpl <em>rotate Servo</em>}' class.
@@ -1207,6 +2467,14 @@ public interface OperationsPackage extends EPackage
      * @generated
      */
     EReference ROTATE_SERVO__ANGLE = eINSTANCE.getrotateServo_Angle();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ROTATE_SERVO__TIME = eINSTANCE.getrotateServo_Time();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.rotateAllServosImpl <em>rotate All Servos</em>}' class.
@@ -1265,6 +2533,14 @@ public interface OperationsPackage extends EPackage
      * @generated
      */
     EReference ROTATE_ALL_SERVOS__ANGLE6 = eINSTANCE.getrotateAllServos_Angle6();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ROTATE_ALL_SERVOS__TIME = eINSTANCE.getrotateAllServos_Time();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.ResultImpl <em>Result</em>}' class.
@@ -1499,6 +2775,186 @@ public interface OperationsPackage extends EPackage
      * @generated
      */
     EAttribute SERVO__SERVO = eINSTANCE.getServo_Servo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.V_maxImpl <em>Vmax</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.V_maxImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getV_max()
+     * @generated
+     */
+    EClass VMAX = eINSTANCE.getV_max();
+
+    /**
+     * The meta object literal for the '<em><b>Vmax</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VMAX__VMAX = eINSTANCE.getV_max_V_max();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.S_maxImpl <em>Smax</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.S_maxImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getS_max()
+     * @generated
+     */
+    EClass SMAX = eINSTANCE.getS_max();
+
+    /**
+     * The meta object literal for the '<em><b>Smax</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SMAX__SMAX = eINSTANCE.getS_max_S_max();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.H_maxImpl <em>Hmax</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.H_maxImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getH_max()
+     * @generated
+     */
+    EClass HMAX = eINSTANCE.getH_max();
+
+    /**
+     * The meta object literal for the '<em><b>Hmax</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HMAX__HMAX = eINSTANCE.getH_max_H_max();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.V_minImpl <em>Vmin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.V_minImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getV_min()
+     * @generated
+     */
+    EClass VMIN = eINSTANCE.getV_min();
+
+    /**
+     * The meta object literal for the '<em><b>Vmin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VMIN__VMIN = eINSTANCE.getV_min_V_min();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.S_minImpl <em>Smin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.S_minImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getS_min()
+     * @generated
+     */
+    EClass SMIN = eINSTANCE.getS_min();
+
+    /**
+     * The meta object literal for the '<em><b>Smin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SMIN__SMIN = eINSTANCE.getS_min_S_min();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.H_minImpl <em>Hmin</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.H_minImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getH_min()
+     * @generated
+     */
+    EClass HMIN = eINSTANCE.getH_min();
+
+    /**
+     * The meta object literal for the '<em><b>Hmin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HMIN__HMIN = eINSTANCE.getH_min_H_min();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.ColorImpl <em>Color</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.ColorImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getColor()
+     * @generated
+     */
+    EClass COLOR = eINSTANCE.getColor();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLOR__COLOR = eINSTANCE.getColor_Color();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.BImpl <em>B</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.BImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getB()
+     * @generated
+     */
+    EClass B = eINSTANCE.getB();
+
+    /**
+     * The meta object literal for the '<em><b>B</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute B__B = eINSTANCE.getB_B();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.GImpl <em>G</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.GImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getG()
+     * @generated
+     */
+    EClass G = eINSTANCE.getG();
+
+    /**
+     * The meta object literal for the '<em><b>G</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute G__G = eINSTANCE.getG_G();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.operations.impl.RImpl <em>R</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.operations.impl.RImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getR()
+     * @generated
+     */
+    EClass R = eINSTANCE.getR();
+
+    /**
+     * The meta object literal for the '<em><b>R</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute R__R = eINSTANCE.getR_R();
 
   }
 

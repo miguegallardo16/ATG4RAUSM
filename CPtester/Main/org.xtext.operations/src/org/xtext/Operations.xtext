@@ -11,7 +11,80 @@ Initial:
 ;
 
 Command:
-	rotateServo | rotateAllServos
+	rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+;
+
+lightRGB:
+	name='lightRGB'
+	'('
+	(r+=R)
+	','
+	(g+=G)
+	','
+	(b+=B)
+	')'
+;
+
+
+//lightRGB(int r, int g, int b)
+
+buzzerOff:
+	name='buzzerOff'
+	'('
+	')'	
+;
+
+buzzerOn:
+	name='buzzerOn'
+	'('
+	(time+=Time)
+	')'
+;
+
+deleteColor:
+	name='deleteColor'
+	'('
+	(color+=Color)
+	')'
+;
+
+colorConfiguration:
+	name='colorConfiguration'
+	'('
+	(color+=Color)
+	','
+	(h_min+=H_min)
+	','
+	(s_min+=S_min)
+	','
+	(v_min+=V_min)
+	','
+	(h_max+=H_max)
+	','
+	(s_max+=S_max)
+	','
+	(v_max+=V_max)
+	')'
+;
+
+cameraColor:
+	name='cameraColor'
+	'('
+	(time+=Time)
+	')'
+;
+
+readAllServos:
+	name='readAllServos'
+	'('
+	')'
+;
+
+readServo:
+	name='readServo'
+	'('
+	(servo+=Servo)
+	')'
 ;
 
 rotateServo:
@@ -109,4 +182,46 @@ Time:
 
 Servo:
 	servo=INT
+;
+
+
+V_max:
+	v_max=INT
+;
+
+S_max:
+	s_max=INT
+;
+
+H_max:
+	h_max=INT
+;
+
+V_min:
+	v_min=INT
+;
+
+S_min:
+	s_min=INT
+;
+
+H_min:
+	h_min=INT
+;
+
+Color:
+	color=STRING
+;
+
+
+B:
+	b=INT
+;
+
+G:
+	g=INT
+;
+
+R:
+	r=INT
 ;

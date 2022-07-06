@@ -42,6 +42,78 @@ public interface OperationsFactory extends EFactory
   Command createCommand();
 
   /**
+   * Returns a new object of class '<em>light RGB</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>light RGB</em>'.
+   * @generated
+   */
+  lightRGB createlightRGB();
+
+  /**
+   * Returns a new object of class '<em>buzzer Off</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>buzzer Off</em>'.
+   * @generated
+   */
+  buzzerOff createbuzzerOff();
+
+  /**
+   * Returns a new object of class '<em>buzzer On</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>buzzer On</em>'.
+   * @generated
+   */
+  buzzerOn createbuzzerOn();
+
+  /**
+   * Returns a new object of class '<em>delete Color</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>delete Color</em>'.
+   * @generated
+   */
+  deleteColor createdeleteColor();
+
+  /**
+   * Returns a new object of class '<em>color Configuration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>color Configuration</em>'.
+   * @generated
+   */
+  colorConfiguration createcolorConfiguration();
+
+  /**
+   * Returns a new object of class '<em>camera Color</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>camera Color</em>'.
+   * @generated
+   */
+  cameraColor createcameraColor();
+
+  /**
+   * Returns a new object of class '<em>read All Servos</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>read All Servos</em>'.
+   * @generated
+   */
+  readAllServos createreadAllServos();
+
+  /**
+   * Returns a new object of class '<em>read Servo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>read Servo</em>'.
+   * @generated
+   */
+  readServo createreadServo();
+
+  /**
    * Returns a new object of class '<em>rotate Servo</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -139,6 +211,96 @@ public interface OperationsFactory extends EFactory
    * @generated
    */
   Servo createServo();
+
+  /**
+   * Returns a new object of class '<em>Vmax</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vmax</em>'.
+   * @generated
+   */
+  V_max createV_max();
+
+  /**
+   * Returns a new object of class '<em>Smax</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Smax</em>'.
+   * @generated
+   */
+  S_max createS_max();
+
+  /**
+   * Returns a new object of class '<em>Hmax</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hmax</em>'.
+   * @generated
+   */
+  H_max createH_max();
+
+  /**
+   * Returns a new object of class '<em>Vmin</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vmin</em>'.
+   * @generated
+   */
+  V_min createV_min();
+
+  /**
+   * Returns a new object of class '<em>Smin</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Smin</em>'.
+   * @generated
+   */
+  S_min createS_min();
+
+  /**
+   * Returns a new object of class '<em>Hmin</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hmin</em>'.
+   * @generated
+   */
+  H_min createH_min();
+
+  /**
+   * Returns a new object of class '<em>Color</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Color</em>'.
+   * @generated
+   */
+  Color createColor();
+
+  /**
+   * Returns a new object of class '<em>B</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>B</em>'.
+   * @generated
+   */
+  B createB();
+
+  /**
+   * Returns a new object of class '<em>G</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>G</em>'.
+   * @generated
+   */
+  G createG();
+
+  /**
+   * Returns a new object of class '<em>R</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>R</em>'.
+   * @generated
+   */
+  R createR();
 
   /**
    * Returns the package supported by this factory.
