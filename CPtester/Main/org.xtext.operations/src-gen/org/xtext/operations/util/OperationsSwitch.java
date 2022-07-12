@@ -111,19 +111,11 @@ public class OperationsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case OperationsPackage.DELETE_COLOR:
+      case OperationsPackage.CALIBRATION:
       {
-        deleteColor deleteColor = (deleteColor)theEObject;
-        T result = casedeleteColor(deleteColor);
-        if (result == null) result = caseCommand(deleteColor);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case OperationsPackage.COLOR_CONFIGURATION:
-      {
-        colorConfiguration colorConfiguration = (colorConfiguration)theEObject;
-        T result = casecolorConfiguration(colorConfiguration);
-        if (result == null) result = caseCommand(colorConfiguration);
+        calibration calibration = (calibration)theEObject;
+        T result = casecalibration(calibration);
+        if (result == null) result = caseCommand(calibration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -387,33 +379,17 @@ public class OperationsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>delete Color</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>calibration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>delete Color</em>'.
+   * @return the result of interpreting the object as an instance of '<em>calibration</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casedeleteColor(deleteColor object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>color Configuration</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>color Configuration</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casecolorConfiguration(colorConfiguration object)
+  public T casecalibration(calibration object)
   {
     return null;
   }

@@ -609,47 +609,38 @@ ruleCommand returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getCommandAccess().getColorConfigurationParserRuleCall_5());
+			newCompositeNode(grammarAccess.getCommandAccess().getCalibrationParserRuleCall_5());
 		}
-		this_colorConfiguration_5=rulecolorConfiguration
+		this_calibration_5=rulecalibration
 		{
-			$current = $this_colorConfiguration_5.current;
+			$current = $this_calibration_5.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getCommandAccess().getDeleteColorParserRuleCall_6());
+			newCompositeNode(grammarAccess.getCommandAccess().getBuzzerOnParserRuleCall_6());
 		}
-		this_deleteColor_6=ruledeleteColor
+		this_buzzerOn_6=rulebuzzerOn
 		{
-			$current = $this_deleteColor_6.current;
+			$current = $this_buzzerOn_6.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getCommandAccess().getBuzzerOnParserRuleCall_7());
+			newCompositeNode(grammarAccess.getCommandAccess().getBuzzerOffParserRuleCall_7());
 		}
-		this_buzzerOn_7=rulebuzzerOn
+		this_buzzerOff_7=rulebuzzerOff
 		{
-			$current = $this_buzzerOn_7.current;
+			$current = $this_buzzerOff_7.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getCommandAccess().getBuzzerOffParserRuleCall_8());
+			newCompositeNode(grammarAccess.getCommandAccess().getLightRGBParserRuleCall_8());
 		}
-		this_buzzerOff_8=rulebuzzerOff
+		this_lightRGB_8=rulelightRGB
 		{
-			$current = $this_buzzerOff_8.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getCommandAccess().getLightRGBParserRuleCall_9());
-		}
-		this_lightRGB_9=rulelightRGB
-		{
-			$current = $this_lightRGB_9.current;
+			$current = $this_lightRGB_8.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -862,15 +853,15 @@ rulebuzzerOn returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuledeleteColor
-entryRuledeleteColor returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDeleteColorRule()); }
-	iv_ruledeleteColor=ruledeleteColor
-	{ $current=$iv_ruledeleteColor.current; }
+// Entry rule entryRulecalibration
+entryRulecalibration returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCalibrationRule()); }
+	iv_rulecalibration=rulecalibration
+	{ $current=$iv_rulecalibration.current; }
 	EOF;
 
-// Rule deleteColor
-ruledeleteColor returns [EObject current=null]
+// Rule calibration
+rulecalibration returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -880,91 +871,31 @@ ruledeleteColor returns [EObject current=null]
 	(
 		(
 			(
-				lv_name_0_0='deleteColor'
+				lv_name_0_0='calibration'
 				{
-					newLeafNode(lv_name_0_0, grammarAccess.getDeleteColorAccess().getNameDeleteColorKeyword_0_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getCalibrationAccess().getNameCalibrationKeyword_0_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDeleteColorRule());
+						$current = createModelElement(grammarAccess.getCalibrationRule());
 					}
-					setWithLastConsumed($current, "name", lv_name_0_0, "deleteColor");
+					setWithLastConsumed($current, "name", lv_name_0_0, "calibration");
 				}
 			)
 		)
 		otherlv_1='('
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDeleteColorAccess().getLeftParenthesisKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getCalibrationAccess().getLeftParenthesisKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDeleteColorAccess().getColorColorParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getColorColorParserRuleCall_2_0());
 				}
 				lv_color_2_0=ruleColor
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDeleteColorRule());
-					}
-					add(
-						$current,
-						"color",
-						lv_color_2_0,
-						"org.xtext.Operations.Color");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3=')'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDeleteColorAccess().getRightParenthesisKeyword_3());
-		}
-	)
-;
-
-// Entry rule entryRulecolorConfiguration
-entryRulecolorConfiguration returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getColorConfigurationRule()); }
-	iv_rulecolorConfiguration=rulecolorConfiguration
-	{ $current=$iv_rulecolorConfiguration.current; }
-	EOF;
-
-// Rule colorConfiguration
-rulecolorConfiguration returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				lv_name_0_0='colorConfiguration'
-				{
-					newLeafNode(lv_name_0_0, grammarAccess.getColorConfigurationAccess().getNameColorConfigurationKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getColorConfigurationRule());
-					}
-					setWithLastConsumed($current, "name", lv_name_0_0, "colorConfiguration");
-				}
-			)
-		)
-		otherlv_1='('
-		{
-			newLeafNode(otherlv_1, grammarAccess.getColorConfigurationAccess().getLeftParenthesisKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getColorColorParserRuleCall_2_0());
-				}
-				lv_color_2_0=ruleColor
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -977,17 +908,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_3=','
 		{
-			newLeafNode(otherlv_3, grammarAccess.getColorConfigurationAccess().getCommaKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getCalibrationAccess().getCommaKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getH_minH_minParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getH_minH_minParserRuleCall_4_0());
 				}
 				lv_h_min_4_0=ruleH_min
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1000,17 +931,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_5=','
 		{
-			newLeafNode(otherlv_5, grammarAccess.getColorConfigurationAccess().getCommaKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getCalibrationAccess().getCommaKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getS_minS_minParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getS_minS_minParserRuleCall_6_0());
 				}
 				lv_s_min_6_0=ruleS_min
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1023,17 +954,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_7=','
 		{
-			newLeafNode(otherlv_7, grammarAccess.getColorConfigurationAccess().getCommaKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getCalibrationAccess().getCommaKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getV_minV_minParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getV_minV_minParserRuleCall_8_0());
 				}
 				lv_v_min_8_0=ruleV_min
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1046,17 +977,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_9=','
 		{
-			newLeafNode(otherlv_9, grammarAccess.getColorConfigurationAccess().getCommaKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getCalibrationAccess().getCommaKeyword_9());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getH_maxH_maxParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getH_maxH_maxParserRuleCall_10_0());
 				}
 				lv_h_max_10_0=ruleH_max
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1069,17 +1000,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_11=','
 		{
-			newLeafNode(otherlv_11, grammarAccess.getColorConfigurationAccess().getCommaKeyword_11());
+			newLeafNode(otherlv_11, grammarAccess.getCalibrationAccess().getCommaKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getS_maxS_maxParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getS_maxS_maxParserRuleCall_12_0());
 				}
 				lv_s_max_12_0=ruleS_max
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1092,17 +1023,17 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_13=','
 		{
-			newLeafNode(otherlv_13, grammarAccess.getColorConfigurationAccess().getCommaKeyword_13());
+			newLeafNode(otherlv_13, grammarAccess.getCalibrationAccess().getCommaKeyword_13());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColorConfigurationAccess().getV_maxV_maxParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getCalibrationAccess().getV_maxV_maxParserRuleCall_14_0());
 				}
 				lv_v_max_14_0=ruleV_max
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getColorConfigurationRule());
+						$current = createModelElementForParent(grammarAccess.getCalibrationRule());
 					}
 					add(
 						$current,
@@ -1115,7 +1046,7 @@ rulecolorConfiguration returns [EObject current=null]
 		)
 		otherlv_15=')'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getColorConfigurationAccess().getRightParenthesisKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getCalibrationAccess().getRightParenthesisKeyword_15());
 		}
 	)
 ;

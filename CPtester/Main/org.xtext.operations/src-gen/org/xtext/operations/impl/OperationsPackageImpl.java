@@ -30,9 +30,8 @@ import org.xtext.operations.V_max;
 import org.xtext.operations.V_min;
 import org.xtext.operations.buzzerOff;
 import org.xtext.operations.buzzerOn;
+import org.xtext.operations.calibration;
 import org.xtext.operations.cameraColor;
-import org.xtext.operations.colorConfiguration;
-import org.xtext.operations.deleteColor;
 import org.xtext.operations.isAt;
 import org.xtext.operations.isAtSingle;
 import org.xtext.operations.lightRGB;
@@ -89,14 +88,7 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass deleteColorEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass colorConfigurationEClass = null;
+  private EClass calibrationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -467,9 +459,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getdeleteColor()
+  public EClass getcalibration()
   {
-    return deleteColorEClass;
+    return calibrationEClass;
   }
 
   /**
@@ -478,9 +470,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getdeleteColor_Color()
+  public EReference getcalibration_Color()
   {
-    return (EReference)deleteColorEClass.getEStructuralFeatures().get(0);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -489,9 +481,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EClass getcolorConfiguration()
+  public EReference getcalibration_H_min()
   {
-    return colorConfigurationEClass;
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -500,9 +492,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getcolorConfiguration_Color()
+  public EReference getcalibration_S_min()
   {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(0);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -511,9 +503,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getcolorConfiguration_H_min()
+  public EReference getcalibration_V_min()
   {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(1);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -522,9 +514,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getcolorConfiguration_S_min()
+  public EReference getcalibration_H_max()
   {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(2);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -533,9 +525,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getcolorConfiguration_V_min()
+  public EReference getcalibration_S_max()
   {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(3);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -544,31 +536,9 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
    * @generated
    */
   @Override
-  public EReference getcolorConfiguration_H_max()
+  public EReference getcalibration_V_max()
   {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getcolorConfiguration_S_max()
-  {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getcolorConfiguration_V_max()
-  {
-    return (EReference)colorConfigurationEClass.getEStructuralFeatures().get(6);
+    return (EReference)calibrationEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1323,17 +1293,14 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     buzzerOnEClass = createEClass(BUZZER_ON);
     createEReference(buzzerOnEClass, BUZZER_ON__TIME);
 
-    deleteColorEClass = createEClass(DELETE_COLOR);
-    createEReference(deleteColorEClass, DELETE_COLOR__COLOR);
-
-    colorConfigurationEClass = createEClass(COLOR_CONFIGURATION);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__COLOR);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__HMIN);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__SMIN);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__VMIN);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__HMAX);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__SMAX);
-    createEReference(colorConfigurationEClass, COLOR_CONFIGURATION__VMAX);
+    calibrationEClass = createEClass(CALIBRATION);
+    createEReference(calibrationEClass, CALIBRATION__COLOR);
+    createEReference(calibrationEClass, CALIBRATION__HMIN);
+    createEReference(calibrationEClass, CALIBRATION__SMIN);
+    createEReference(calibrationEClass, CALIBRATION__VMIN);
+    createEReference(calibrationEClass, CALIBRATION__HMAX);
+    createEReference(calibrationEClass, CALIBRATION__SMAX);
+    createEReference(calibrationEClass, CALIBRATION__VMAX);
 
     cameraColorEClass = createEClass(CAMERA_COLOR);
     createEReference(cameraColorEClass, CAMERA_COLOR__TIME);
@@ -1456,8 +1423,7 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     lightRGBEClass.getESuperTypes().add(this.getCommand());
     buzzerOffEClass.getESuperTypes().add(this.getCommand());
     buzzerOnEClass.getESuperTypes().add(this.getCommand());
-    deleteColorEClass.getESuperTypes().add(this.getCommand());
-    colorConfigurationEClass.getESuperTypes().add(this.getCommand());
+    calibrationEClass.getESuperTypes().add(this.getCommand());
     cameraColorEClass.getESuperTypes().add(this.getCommand());
     readAllServosEClass.getESuperTypes().add(this.getCommand());
     readServoEClass.getESuperTypes().add(this.getCommand());
@@ -1484,17 +1450,14 @@ public class OperationsPackageImpl extends EPackageImpl implements OperationsPac
     initEClass(buzzerOnEClass, buzzerOn.class, "buzzerOn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getbuzzerOn_Time(), this.getTime(), null, "time", null, 0, -1, buzzerOn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(deleteColorEClass, deleteColor.class, "deleteColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getdeleteColor_Color(), this.getColor(), null, "color", null, 0, -1, deleteColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(colorConfigurationEClass, colorConfiguration.class, "colorConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcolorConfiguration_Color(), this.getColor(), null, "color", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_H_min(), this.getH_min(), null, "h_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_S_min(), this.getS_min(), null, "s_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_V_min(), this.getV_min(), null, "v_min", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_H_max(), this.getH_max(), null, "h_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_S_max(), this.getS_max(), null, "s_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcolorConfiguration_V_max(), this.getV_max(), null, "v_max", null, 0, -1, colorConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(calibrationEClass, calibration.class, "calibration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getcalibration_Color(), this.getColor(), null, "color", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_H_min(), this.getH_min(), null, "h_min", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_S_min(), this.getS_min(), null, "s_min", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_V_min(), this.getV_min(), null, "v_min", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_H_max(), this.getH_max(), null, "h_max", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_S_max(), this.getS_max(), null, "s_max", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getcalibration_V_max(), this.getV_max(), null, "v_max", null, 0, -1, calibration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cameraColorEClass, cameraColor.class, "cameraColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getcameraColor_Time(), this.getTime(), null, "time", null, 0, -1, cameraColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

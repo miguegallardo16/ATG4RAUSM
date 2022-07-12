@@ -1,5 +1,5 @@
 Class: Machine
-	StateMachine: TestingOperations
+	StateMachine: Testings
 		PseudoState: Initial
 		PseudoState: Final
 		PseudoState: Error
@@ -8,34 +8,38 @@ Class: Machine
 				Guard: []
 		
 		State: Given
-				Activity: Arm.BaseServo.ServosOperations.posInicial(1000)
-				Activity: Arm.BaseServo.ServosOperations.buzzerOn(10)
-				Activity: Arm.BaseServo.ServosOperations.buzzerOff()
-				Activity: Arm.BaseServo.ServosOperations.cameraColor(100)
-				Activity: Arm.BaseServo.ServosOperations.colorConfiguration(Rojo, 1, 1, 1, 1, 1, 1)
-				Activity: Arm.BaseServo.ServosOperations.deleteColor(Rojo)
-				Activity: Arm.BaseServo.ServosOperations.lightRGB(1, 1, 1)
-				Activity: Arm.BaseServo.ServosOperations.readAllServos()
-				Activity: Arm.BaseServo.ServosOperations.readServo(4)
-				Activity: Arm.BaseServo.ServosOperations.rotateAllServos(1, 1, 1, 1, 1, 1, 1)
+				Activity: Arm.posInicial(1000);
+				Activity: Board.Buzzer.buzzerOn(10);
+				Activity: Board.Buzzer.buzzerOff();
+				Activity: Arm.Camera.cameraColor(100);
+				Activity: Arm.Camera.calibration(Rojo, 1, 1, 1, 1, 1, 1);
+				Activity: Board.Light.lightRGB(1, 1, 1);
+				Activity: Arm.Servos.rotateServo(3, 3, 3)
+				Activity: Arm.readAllServos()
+				Activity: Arm.Servos.readServo(1)
+				Activity: Arm.Servos.readServo(2)
+				Activity: Arm.Servos.readServo(3)
+				Activity: Arm.Servos.readServo(4)
+				Activity: Arm.Servos.readServo(5)
+				Activity: Arm.rotateAllServos(1, 1, 1, 1, 1, 1, 1);
 									
 		State: GivenWarning
-				Activity: MessReport(mWarning, "Warning Time")
+				Activity: MessReport(mWarning, "Warning Time");
 		
 		Transition: (GivenWarning->Given)
 				Guard: []			
 					
 		Transition: (Given->GivenWarning)
-				Guard: Arm.BaseServo.ServosOperations.Time(1111)
+				Guard: Arm.wait(1114);
 					
 		Transition: (Given->When)				
-				Guard: Arm.BaseServo.ServosOperations.isAt(1, 1, 1, 1, 1, 1, 2)
+				Guard: Arm.isAt(1, 1, 1, 1, 1, 1, 2);
 				
-		State:  When
-				Activity: Arm.BaseServo.ServosOperations.rotateServo(1, 2, 3)
+		State: When
+				Activity: Arm.Servos.rotateServo(4, 2, 3)
 								
 		Transition: (When->Error)						
-				Guard: NotLaterThan(oRuntime, 1)
+				Guard: StateVar(oRunTime) >= (3+Sett(time_resolution);
 
 		Transition: (When->Final)		
-				Guard: Arm.BaseServo.ServosOperations.isAtSingle(1, 1, 1)
+				Guard: Arm.Servos.isAtSingle(2, 1, 1)						

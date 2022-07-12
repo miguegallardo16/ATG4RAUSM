@@ -11,7 +11,7 @@ Initial:
 ;
 
 Command:
-	rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+	rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 ;
 
 lightRGB:
@@ -26,8 +26,6 @@ lightRGB:
 ;
 
 
-//lightRGB(int r, int g, int b)
-
 buzzerOff:
 	name='buzzerOff'
 	'('
@@ -41,15 +39,8 @@ buzzerOn:
 	')'
 ;
 
-deleteColor:
-	name='deleteColor'
-	'('
-	(color+=Color)
-	')'
-;
-
-colorConfiguration:
-	name='colorConfiguration'
+calibration:
+	name='calibration'
 	'('
 	(color+=Color)
 	','

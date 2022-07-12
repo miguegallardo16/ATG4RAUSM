@@ -69,22 +69,13 @@ public interface OperationsFactory extends EFactory
   buzzerOn createbuzzerOn();
 
   /**
-   * Returns a new object of class '<em>delete Color</em>'.
+   * Returns a new object of class '<em>calibration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>delete Color</em>'.
+   * @return a new object of class '<em>calibration</em>'.
    * @generated
    */
-  deleteColor createdeleteColor();
-
-  /**
-   * Returns a new object of class '<em>color Configuration</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>color Configuration</em>'.
-   * @generated
-   */
-  colorConfiguration createcolorConfiguration();
+  calibration createcalibration();
 
   /**
    * Returns a new object of class '<em>camera Color</em>'.

@@ -22,11 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="time" upperBound="-1" eType="#//Time"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="deleteColor" eSuperTypes="#//Command">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="color" upperBound="-1"
-        eType="#//Color" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="colorConfiguration" eSuperTypes="#//Command">
+  <eClassifiers xsi:type="ecore:EClass" name="calibration" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" upperBound="-1"
         eType="#//Color" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="h_min" upperBound="-1"

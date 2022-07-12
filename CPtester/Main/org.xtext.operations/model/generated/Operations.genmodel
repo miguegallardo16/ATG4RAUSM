@@ -22,17 +22,14 @@
     <genClasses ecoreClass="Operations.ecore#//buzzerOn">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//buzzerOn/time"/>
     </genClasses>
-    <genClasses ecoreClass="Operations.ecore#//deleteColor">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//deleteColor/color"/>
-    </genClasses>
-    <genClasses ecoreClass="Operations.ecore#//colorConfiguration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/color"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/h_min"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/s_min"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/v_min"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/h_max"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/s_max"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//colorConfiguration/v_max"/>
+    <genClasses ecoreClass="Operations.ecore#//calibration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/h_min"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/s_min"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/v_min"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/h_max"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/s_max"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//calibration/v_max"/>
     </genClasses>
     <genClasses ecoreClass="Operations.ecore#//cameraColor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Operations.ecore#//cameraColor/time"/>

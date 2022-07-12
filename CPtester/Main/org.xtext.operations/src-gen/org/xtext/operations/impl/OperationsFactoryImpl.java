@@ -70,8 +70,7 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
       case OperationsPackage.LIGHT_RGB: return createlightRGB();
       case OperationsPackage.BUZZER_OFF: return createbuzzerOff();
       case OperationsPackage.BUZZER_ON: return createbuzzerOn();
-      case OperationsPackage.DELETE_COLOR: return createdeleteColor();
-      case OperationsPackage.COLOR_CONFIGURATION: return createcolorConfiguration();
+      case OperationsPackage.CALIBRATION: return createcalibration();
       case OperationsPackage.CAMERA_COLOR: return createcameraColor();
       case OperationsPackage.READ_ALL_SERVOS: return createreadAllServos();
       case OperationsPackage.READ_SERVO: return createreadServo();
@@ -167,22 +166,10 @@ public class OperationsFactoryImpl extends EFactoryImpl implements OperationsFac
    * @generated
    */
   @Override
-  public deleteColor createdeleteColor()
+  public calibration createcalibration()
   {
-    deleteColorImpl deleteColor = new deleteColorImpl();
-    return deleteColor;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public colorConfiguration createcolorConfiguration()
-  {
-    colorConfigurationImpl colorConfiguration = new colorConfigurationImpl();
-    return colorConfiguration;
+    calibrationImpl calibration = new calibrationImpl();
+    return calibration;
   }
 
   /**

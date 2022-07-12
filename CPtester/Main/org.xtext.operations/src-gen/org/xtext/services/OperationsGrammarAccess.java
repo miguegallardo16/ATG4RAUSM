@@ -72,18 +72,17 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cReadServoParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cReadAllServosParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cCameraColorParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cColorConfigurationParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cDeleteColorParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cBuzzerOnParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cBuzzerOffParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cLightRGBParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cCalibrationParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cBuzzerOnParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cBuzzerOffParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cLightRGBParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		
 		//Command:
-		//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+		//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+		//rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//rotateServo
@@ -101,20 +100,17 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//cameraColor
 		public RuleCall getCameraColorParserRuleCall_4() { return cCameraColorParserRuleCall_4; }
 		
-		//colorConfiguration
-		public RuleCall getColorConfigurationParserRuleCall_5() { return cColorConfigurationParserRuleCall_5; }
-		
-		//deleteColor
-		public RuleCall getDeleteColorParserRuleCall_6() { return cDeleteColorParserRuleCall_6; }
+		//calibration
+		public RuleCall getCalibrationParserRuleCall_5() { return cCalibrationParserRuleCall_5; }
 		
 		//buzzerOn
-		public RuleCall getBuzzerOnParserRuleCall_7() { return cBuzzerOnParserRuleCall_7; }
+		public RuleCall getBuzzerOnParserRuleCall_6() { return cBuzzerOnParserRuleCall_6; }
 		
 		//buzzerOff
-		public RuleCall getBuzzerOffParserRuleCall_8() { return cBuzzerOffParserRuleCall_8; }
+		public RuleCall getBuzzerOffParserRuleCall_7() { return cBuzzerOffParserRuleCall_7; }
 		
 		//lightRGB
-		public RuleCall getLightRGBParserRuleCall_9() { return cLightRGBParserRuleCall_9; }
+		public RuleCall getLightRGBParserRuleCall_8() { return cLightRGBParserRuleCall_8; }
 	}
 	public class LightRGBElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.lightRGB");
@@ -198,7 +194,6 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		////lightRGB(int r, int g, int b)
 		//buzzerOff:
 		//    name='buzzerOff'
 		//    '('
@@ -265,53 +260,11 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//')'
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
-	public class DeleteColorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.deleteColor");
+	public class CalibrationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.calibration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameDeleteColorKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cColorColorParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//deleteColor:
-		//    name='deleteColor'
-		//    '('
-		//    (color+=Color)
-		//    ')'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name='deleteColor'
-		//'('
-		//(color+=Color)
-		//')'
-		public Group getGroup() { return cGroup; }
-		
-		//name='deleteColor'
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//'deleteColor'
-		public Keyword getNameDeleteColorKeyword_0_0() { return cNameDeleteColorKeyword_0_0; }
-		
-		//'('
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-		
-		//(color+=Color)
-		public Assignment getColorAssignment_2() { return cColorAssignment_2; }
-		
-		//Color
-		public RuleCall getColorColorParserRuleCall_2_0() { return cColorColorParserRuleCall_2_0; }
-		
-		//')'
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
-	}
-	public class ColorConfigurationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Operations.colorConfiguration");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameColorConfigurationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cNameCalibrationKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cColorColorParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
@@ -335,8 +288,8 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cV_maxV_maxParserRuleCall_14_0 = (RuleCall)cV_maxAssignment_14.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
-		//colorConfiguration:
-		//    name='colorConfiguration'
+		//calibration:
+		//    name='calibration'
 		//    '('
 		//    (color+=Color)
 		//    ','
@@ -355,7 +308,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name='colorConfiguration'
+		//name='calibration'
 		//'('
 		//(color+=Color)
 		//','
@@ -373,11 +326,11 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//')'
 		public Group getGroup() { return cGroup; }
 		
-		//name='colorConfiguration'
+		//name='calibration'
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
-		//'colorConfiguration'
-		public Keyword getNameColorConfigurationKeyword_0_0() { return cNameColorConfigurationKeyword_0_0; }
+		//'calibration'
+		public Keyword getNameCalibrationKeyword_0_0() { return cNameCalibrationKeyword_0_0; }
 		
 		//'('
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
@@ -1320,8 +1273,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final LightRGBElements pLightRGB;
 	private final BuzzerOffElements pBuzzerOff;
 	private final BuzzerOnElements pBuzzerOn;
-	private final DeleteColorElements pDeleteColor;
-	private final ColorConfigurationElements pColorConfiguration;
+	private final CalibrationElements pCalibration;
 	private final CameraColorElements pCameraColor;
 	private final ReadAllServosElements pReadAllServos;
 	private final ReadServoElements pReadServo;
@@ -1361,8 +1313,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pLightRGB = new LightRGBElements();
 		this.pBuzzerOff = new BuzzerOffElements();
 		this.pBuzzerOn = new BuzzerOnElements();
-		this.pDeleteColor = new DeleteColorElements();
-		this.pColorConfiguration = new ColorConfigurationElements();
+		this.pCalibration = new CalibrationElements();
 		this.pCameraColor = new CameraColorElements();
 		this.pReadAllServos = new ReadAllServosElements();
 		this.pReadServo = new ReadServoElements();
@@ -1431,7 +1382,7 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Command:
-	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 	//;
 	public CommandElements getCommandAccess() {
 		return pCommand;
@@ -1459,7 +1410,6 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getLightRGBAccess().getRule();
 	}
 	
-	////lightRGB(int r, int g, int b)
 	//buzzerOff:
 	//    name='buzzerOff'
 	//    '('
@@ -1487,22 +1437,8 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getBuzzerOnAccess().getRule();
 	}
 	
-	//deleteColor:
-	//    name='deleteColor'
-	//    '('
-	//    (color+=Color)
-	//    ')'
-	//;
-	public DeleteColorElements getDeleteColorAccess() {
-		return pDeleteColor;
-	}
-	
-	public ParserRule getDeleteColorRule() {
-		return getDeleteColorAccess().getRule();
-	}
-	
-	//colorConfiguration:
-	//    name='colorConfiguration'
+	//calibration:
+	//    name='calibration'
 	//    '('
 	//    (color+=Color)
 	//    ','
@@ -1519,12 +1455,12 @@ public class OperationsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//    (v_max+=V_max)
 	//    ')'
 	//;
-	public ColorConfigurationElements getColorConfigurationAccess() {
-		return pColorConfiguration;
+	public CalibrationElements getCalibrationAccess() {
+		return pCalibration;
 	}
 	
-	public ParserRule getColorConfigurationRule() {
-		return getColorConfigurationAccess().getRule();
+	public ParserRule getCalibrationRule() {
+		return getCalibrationAccess().getRule();
 	}
 	
 	//cameraColor:

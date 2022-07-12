@@ -38,9 +38,8 @@ import org.xtext.operations.V_max;
 import org.xtext.operations.V_min;
 import org.xtext.operations.buzzerOff;
 import org.xtext.operations.buzzerOn;
+import org.xtext.operations.calibration;
 import org.xtext.operations.cameraColor;
-import org.xtext.operations.colorConfiguration;
-import org.xtext.operations.deleteColor;
 import org.xtext.operations.isAt;
 import org.xtext.operations.isAtSingle;
 import org.xtext.operations.lightRGB;
@@ -142,14 +141,11 @@ public class CPtesterSemanticSequencer extends OperationsSemanticSequencer {
 			case OperationsPackage.BUZZER_ON:
 				sequence_buzzerOn(context, (buzzerOn) semanticObject); 
 				return; 
+			case OperationsPackage.CALIBRATION:
+				sequence_calibration(context, (calibration) semanticObject); 
+				return; 
 			case OperationsPackage.CAMERA_COLOR:
 				sequence_cameraColor(context, (cameraColor) semanticObject); 
-				return; 
-			case OperationsPackage.COLOR_CONFIGURATION:
-				sequence_colorConfiguration(context, (colorConfiguration) semanticObject); 
-				return; 
-			case OperationsPackage.DELETE_COLOR:
-				sequence_deleteColor(context, (deleteColor) semanticObject); 
 				return; 
 			case OperationsPackage.IS_AT:
 				sequence_isAt(context, (isAt) semanticObject); 

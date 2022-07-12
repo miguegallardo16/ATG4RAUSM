@@ -1,16 +1,20 @@
-Scenario "TestingOperations"
+Scenario "Testings"
 {
 	GIVEN posInicial(1000)
 	AND buzzerOn(10)
 	AND buzzerOff()
 	AND cameraColor(100)
-	AND colorConfiguration("Rojo",1,1,1,1,1,1)
-	AND deleteColor("Rojo")
+	AND calibration("Rojo",1,1,1,1,1,1)
 	AND lightRGB(1,1,1)
+	AND rotateServo(3,3,3)
 	AND readAllServos() 
+	AND readServo(1)
+	AND readServo(2)
+	AND readServo(3)
 	AND readServo(4)
-	AND rotateAllServos(1,1,1,1,1,1,1) 
-	WHEN rotateServo(1,2,3)
+	AND readServo(5)
+	AND rotateAllServos(1,1,1,1,1,1,1)
+	WHEN rotateServo(4,2,3)
 	THEN result(1)
-	AND NotLaterThan(1) Query isAtSingle(1,1,1)
+	AND NotLaterThan(3) Query isAtSingle(2,1,1)
 } 

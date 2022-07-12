@@ -101,14 +101,9 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
         return createbuzzerOnAdapter();
       }
       @Override
-      public Adapter casedeleteColor(deleteColor object)
+      public Adapter casecalibration(calibration object)
       {
-        return createdeleteColorAdapter();
-      }
-      @Override
-      public Adapter casecolorConfiguration(colorConfiguration object)
-      {
-        return createcolorConfigurationAdapter();
+        return createcalibrationAdapter();
       }
       @Override
       public Adapter casecameraColor(cameraColor object)
@@ -328,31 +323,16 @@ public class OperationsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.operations.deleteColor <em>delete Color</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.operations.calibration <em>calibration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.operations.deleteColor
+   * @see org.xtext.operations.calibration
    * @generated
    */
-  public Adapter createdeleteColorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.operations.colorConfiguration <em>color Configuration</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.operations.colorConfiguration
-   * @generated
-   */
-  public Adapter createcolorConfigurationAdapter()
+  public Adapter createcalibrationAdapter()
   {
     return null;
   }

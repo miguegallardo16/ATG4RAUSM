@@ -243,14 +243,14 @@ public interface OperationsPackage extends EPackage
   int BUZZER_ON_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.operations.impl.deleteColorImpl <em>delete Color</em>}' class.
+   * The meta object id for the '{@link org.xtext.operations.impl.calibrationImpl <em>calibration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.deleteColorImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getdeleteColor()
+   * @see org.xtext.operations.impl.calibrationImpl
+   * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibration()
    * @generated
    */
-  int DELETE_COLOR = 5;
+  int CALIBRATION = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -259,7 +259,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DELETE_COLOR__NAME = COMMAND__NAME;
+  int CALIBRATION__NAME = COMMAND__NAME;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' containment reference list.
@@ -268,44 +268,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DELETE_COLOR__COLOR = COMMAND_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>delete Color</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DELETE_COLOR_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.operations.impl.colorConfigurationImpl <em>color Configuration</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.operations.impl.colorConfigurationImpl
-   * @see org.xtext.operations.impl.OperationsPackageImpl#getcolorConfiguration()
-   * @generated
-   */
-  int COLOR_CONFIGURATION = 6;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_CONFIGURATION__NAME = COMMAND__NAME;
-
-  /**
-   * The feature id for the '<em><b>Color</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_CONFIGURATION__COLOR = COMMAND_FEATURE_COUNT + 0;
+  int CALIBRATION__COLOR = COMMAND_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hmin</b></em>' containment reference list.
@@ -314,7 +277,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__HMIN = COMMAND_FEATURE_COUNT + 1;
+  int CALIBRATION__HMIN = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Smin</b></em>' containment reference list.
@@ -323,7 +286,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__SMIN = COMMAND_FEATURE_COUNT + 2;
+  int CALIBRATION__SMIN = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Vmin</b></em>' containment reference list.
@@ -332,7 +295,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__VMIN = COMMAND_FEATURE_COUNT + 3;
+  int CALIBRATION__VMIN = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Hmax</b></em>' containment reference list.
@@ -341,7 +304,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__HMAX = COMMAND_FEATURE_COUNT + 4;
+  int CALIBRATION__HMAX = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Smax</b></em>' containment reference list.
@@ -350,7 +313,7 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__SMAX = COMMAND_FEATURE_COUNT + 5;
+  int CALIBRATION__SMAX = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Vmax</b></em>' containment reference list.
@@ -359,16 +322,16 @@ public interface OperationsPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION__VMAX = COMMAND_FEATURE_COUNT + 6;
+  int CALIBRATION__VMAX = COMMAND_FEATURE_COUNT + 6;
 
   /**
-   * The number of structural features of the '<em>color Configuration</em>' class.
+   * The number of structural features of the '<em>calibration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLOR_CONFIGURATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
+  int CALIBRATION_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.
@@ -378,7 +341,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getcameraColor()
    * @generated
    */
-  int CAMERA_COLOR = 7;
+  int CAMERA_COLOR = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -415,7 +378,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getreadAllServos()
    * @generated
    */
-  int READ_ALL_SERVOS = 8;
+  int READ_ALL_SERVOS = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -443,7 +406,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getreadServo()
    * @generated
    */
-  int READ_SERVO = 9;
+  int READ_SERVO = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -480,7 +443,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateServo()
    * @generated
    */
-  int ROTATE_SERVO = 10;
+  int ROTATE_SERVO = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -535,7 +498,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getrotateAllServos()
    * @generated
    */
-  int ROTATE_ALL_SERVOS = 11;
+  int ROTATE_ALL_SERVOS = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -626,7 +589,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getResult()
    * @generated
    */
-  int RESULT = 12;
+  int RESULT = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -663,7 +626,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getConditions()
    * @generated
    */
-  int CONDITIONS = 13;
+  int CONDITIONS = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,7 +663,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getSolution()
    * @generated
    */
-  int SOLUTION = 14;
+  int SOLUTION = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -737,7 +700,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getisAtSingle()
    * @generated
    */
-  int IS_AT_SINGLE = 15;
+  int IS_AT_SINGLE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -792,7 +755,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getisAt()
    * @generated
    */
-  int IS_AT = 16;
+  int IS_AT = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -883,7 +846,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getAngle_res()
    * @generated
    */
-  int ANGLE_RES = 17;
+  int ANGLE_RES = 16;
 
   /**
    * The feature id for the '<em><b>Angle res</b></em>' attribute.
@@ -911,7 +874,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getAngle()
    * @generated
    */
-  int ANGLE = 18;
+  int ANGLE = 17;
 
   /**
    * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -939,7 +902,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getTime()
    * @generated
    */
-  int TIME = 19;
+  int TIME = 18;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -967,7 +930,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getServo()
    * @generated
    */
-  int SERVO = 20;
+  int SERVO = 19;
 
   /**
    * The feature id for the '<em><b>Servo</b></em>' attribute.
@@ -995,7 +958,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getV_max()
    * @generated
    */
-  int VMAX = 21;
+  int VMAX = 20;
 
   /**
    * The feature id for the '<em><b>Vmax</b></em>' attribute.
@@ -1023,7 +986,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getS_max()
    * @generated
    */
-  int SMAX = 22;
+  int SMAX = 21;
 
   /**
    * The feature id for the '<em><b>Smax</b></em>' attribute.
@@ -1051,7 +1014,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getH_max()
    * @generated
    */
-  int HMAX = 23;
+  int HMAX = 22;
 
   /**
    * The feature id for the '<em><b>Hmax</b></em>' attribute.
@@ -1079,7 +1042,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getV_min()
    * @generated
    */
-  int VMIN = 24;
+  int VMIN = 23;
 
   /**
    * The feature id for the '<em><b>Vmin</b></em>' attribute.
@@ -1107,7 +1070,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getS_min()
    * @generated
    */
-  int SMIN = 25;
+  int SMIN = 24;
 
   /**
    * The feature id for the '<em><b>Smin</b></em>' attribute.
@@ -1135,7 +1098,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getH_min()
    * @generated
    */
-  int HMIN = 26;
+  int HMIN = 25;
 
   /**
    * The feature id for the '<em><b>Hmin</b></em>' attribute.
@@ -1163,7 +1126,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 27;
+  int COLOR = 26;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1191,7 +1154,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getB()
    * @generated
    */
-  int B = 28;
+  int B = 27;
 
   /**
    * The feature id for the '<em><b>B</b></em>' attribute.
@@ -1219,7 +1182,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getG()
    * @generated
    */
-  int G = 29;
+  int G = 28;
 
   /**
    * The feature id for the '<em><b>G</b></em>' attribute.
@@ -1247,7 +1210,7 @@ public interface OperationsPackage extends EPackage
    * @see org.xtext.operations.impl.OperationsPackageImpl#getR()
    * @generated
    */
-  int R = 30;
+  int R = 29;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -1396,112 +1359,91 @@ public interface OperationsPackage extends EPackage
   EReference getbuzzerOn_Time();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.operations.deleteColor <em>delete Color</em>}'.
+   * Returns the meta object for class '{@link org.xtext.operations.calibration <em>calibration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>delete Color</em>'.
-   * @see org.xtext.operations.deleteColor
+   * @return the meta object for class '<em>calibration</em>'.
+   * @see org.xtext.operations.calibration
    * @generated
    */
-  EClass getdeleteColor();
+  EClass getcalibration();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.deleteColor#getColor <em>Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Color</em>'.
-   * @see org.xtext.operations.deleteColor#getColor()
-   * @see #getdeleteColor()
-   * @generated
-   */
-  EReference getdeleteColor_Color();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.operations.colorConfiguration <em>color Configuration</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>color Configuration</em>'.
-   * @see org.xtext.operations.colorConfiguration
-   * @generated
-   */
-  EClass getcolorConfiguration();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getColor <em>Color</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getColor <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Color</em>'.
-   * @see org.xtext.operations.colorConfiguration#getColor()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getColor()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_Color();
+  EReference getcalibration_Color();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getH_min <em>Hmin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getH_min <em>Hmin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Hmin</em>'.
-   * @see org.xtext.operations.colorConfiguration#getH_min()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getH_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_H_min();
+  EReference getcalibration_H_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getS_min <em>Smin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getS_min <em>Smin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Smin</em>'.
-   * @see org.xtext.operations.colorConfiguration#getS_min()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getS_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_S_min();
+  EReference getcalibration_S_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getV_min <em>Vmin</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getV_min <em>Vmin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Vmin</em>'.
-   * @see org.xtext.operations.colorConfiguration#getV_min()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getV_min()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_V_min();
+  EReference getcalibration_V_min();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getH_max <em>Hmax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getH_max <em>Hmax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Hmax</em>'.
-   * @see org.xtext.operations.colorConfiguration#getH_max()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getH_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_H_max();
+  EReference getcalibration_H_max();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getS_max <em>Smax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getS_max <em>Smax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Smax</em>'.
-   * @see org.xtext.operations.colorConfiguration#getS_max()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getS_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_S_max();
+  EReference getcalibration_S_max();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.operations.colorConfiguration#getV_max <em>Vmax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.operations.calibration#getV_max <em>Vmax</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Vmax</em>'.
-   * @see org.xtext.operations.colorConfiguration#getV_max()
-   * @see #getcolorConfiguration()
+   * @see org.xtext.operations.calibration#getV_max()
+   * @see #getcalibration()
    * @generated
    */
-  EReference getcolorConfiguration_V_max();
+  EReference getcalibration_V_max();
 
   /**
    * Returns the meta object for class '{@link org.xtext.operations.cameraColor <em>camera Color</em>}'.
@@ -2313,14 +2255,14 @@ public interface OperationsPackage extends EPackage
     EReference BUZZER_ON__TIME = eINSTANCE.getbuzzerOn_Time();
 
     /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.deleteColorImpl <em>delete Color</em>}' class.
+     * The meta object literal for the '{@link org.xtext.operations.impl.calibrationImpl <em>calibration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.deleteColorImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getdeleteColor()
+     * @see org.xtext.operations.impl.calibrationImpl
+     * @see org.xtext.operations.impl.OperationsPackageImpl#getcalibration()
      * @generated
      */
-    EClass DELETE_COLOR = eINSTANCE.getdeleteColor();
+    EClass CALIBRATION = eINSTANCE.getcalibration();
 
     /**
      * The meta object literal for the '<em><b>Color</b></em>' containment reference list feature.
@@ -2328,25 +2270,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DELETE_COLOR__COLOR = eINSTANCE.getdeleteColor_Color();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.operations.impl.colorConfigurationImpl <em>color Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.operations.impl.colorConfigurationImpl
-     * @see org.xtext.operations.impl.OperationsPackageImpl#getcolorConfiguration()
-     * @generated
-     */
-    EClass COLOR_CONFIGURATION = eINSTANCE.getcolorConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Color</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference COLOR_CONFIGURATION__COLOR = eINSTANCE.getcolorConfiguration_Color();
+    EReference CALIBRATION__COLOR = eINSTANCE.getcalibration_Color();
 
     /**
      * The meta object literal for the '<em><b>Hmin</b></em>' containment reference list feature.
@@ -2354,7 +2278,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__HMIN = eINSTANCE.getcolorConfiguration_H_min();
+    EReference CALIBRATION__HMIN = eINSTANCE.getcalibration_H_min();
 
     /**
      * The meta object literal for the '<em><b>Smin</b></em>' containment reference list feature.
@@ -2362,7 +2286,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__SMIN = eINSTANCE.getcolorConfiguration_S_min();
+    EReference CALIBRATION__SMIN = eINSTANCE.getcalibration_S_min();
 
     /**
      * The meta object literal for the '<em><b>Vmin</b></em>' containment reference list feature.
@@ -2370,7 +2294,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__VMIN = eINSTANCE.getcolorConfiguration_V_min();
+    EReference CALIBRATION__VMIN = eINSTANCE.getcalibration_V_min();
 
     /**
      * The meta object literal for the '<em><b>Hmax</b></em>' containment reference list feature.
@@ -2378,7 +2302,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__HMAX = eINSTANCE.getcolorConfiguration_H_max();
+    EReference CALIBRATION__HMAX = eINSTANCE.getcalibration_H_max();
 
     /**
      * The meta object literal for the '<em><b>Smax</b></em>' containment reference list feature.
@@ -2386,7 +2310,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__SMAX = eINSTANCE.getcolorConfiguration_S_max();
+    EReference CALIBRATION__SMAX = eINSTANCE.getcalibration_S_max();
 
     /**
      * The meta object literal for the '<em><b>Vmax</b></em>' containment reference list feature.
@@ -2394,7 +2318,7 @@ public interface OperationsPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLOR_CONFIGURATION__VMAX = eINSTANCE.getcolorConfiguration_V_max();
+    EReference CALIBRATION__VMAX = eINSTANCE.getcalibration_V_max();
 
     /**
      * The meta object literal for the '{@link org.xtext.operations.impl.cameraColorImpl <em>camera Color</em>}' class.

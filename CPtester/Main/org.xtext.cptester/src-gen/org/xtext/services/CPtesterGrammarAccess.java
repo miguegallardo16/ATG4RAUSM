@@ -437,7 +437,7 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	}
 	
 	//Command:
-	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | colorConfiguration | deleteColor | buzzerOn | buzzerOff | lightRGB
+	//    rotateServo | rotateAllServos | readServo | readAllServos | cameraColor | calibration | buzzerOn | buzzerOff | lightRGB
 	//;
 	public OperationsGrammarAccess.CommandElements getCommandAccess() {
 		return gaOperations.getCommandAccess();
@@ -465,7 +465,6 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getLightRGBAccess().getRule();
 	}
 	
-	////lightRGB(int r, int g, int b)
 	//buzzerOff:
 	//    name='buzzerOff'
 	//    '('
@@ -493,22 +492,8 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getBuzzerOnAccess().getRule();
 	}
 	
-	//deleteColor:
-	//    name='deleteColor'
-	//    '('
-	//    (color+=Color)
-	//    ')'
-	//;
-	public OperationsGrammarAccess.DeleteColorElements getDeleteColorAccess() {
-		return gaOperations.getDeleteColorAccess();
-	}
-	
-	public ParserRule getDeleteColorRule() {
-		return getDeleteColorAccess().getRule();
-	}
-	
-	//colorConfiguration:
-	//    name='colorConfiguration'
+	//calibration:
+	//    name='calibration'
 	//    '('
 	//    (color+=Color)
 	//    ','
@@ -525,12 +510,12 @@ public class CPtesterGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	//    (v_max+=V_max)
 	//    ')'
 	//;
-	public OperationsGrammarAccess.ColorConfigurationElements getColorConfigurationAccess() {
-		return gaOperations.getColorConfigurationAccess();
+	public OperationsGrammarAccess.CalibrationElements getCalibrationAccess() {
+		return gaOperations.getCalibrationAccess();
 	}
 	
-	public ParserRule getColorConfigurationRule() {
-		return getColorConfigurationAccess().getRule();
+	public ParserRule getCalibrationRule() {
+		return getCalibrationAccess().getRule();
 	}
 	
 	//cameraColor:
